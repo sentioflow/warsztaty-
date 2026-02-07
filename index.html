@@ -249,20 +249,23 @@
       border-color: var(--slate);
       box-shadow: 0 4px 20px rgba(27, 42, 61, 0.06);
     }
-    .deliverable-visual {
-      height: 260px;
+     .deliverable-visual {
+      height: 300px;
       display: flex; align-items: center; justify-content: center;
       position: relative;
       overflow: hidden;
-      padding: 12px;
+      padding: 0;
     }
-    .deliverable-visual.bg-warm { background: linear-gradient(145deg, #FDF5F1 0%, #F9E8DF 50%, #FDF5F1 100%); }
-    .deliverable-visual.bg-slate { background: linear-gradient(145deg, #F3F6F9 0%, #E2E8F0 50%, #F3F6F9 100%); }
-    .deliverable-visual.bg-green { background: linear-gradient(145deg, #EDF7F4 0%, #D4EDE6 50%, #EDF7F4 100%); }
-    .deliverable-visual svg.illust {
-      width: 88%; height: auto;
-      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.06));
+    .deliverable-visual.bg-warm, .deliverable-visual.bg-slate, .deliverable-visual.bg-green {
+      background: #F5F0EB;
+    }
+    .deliverable-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .deliverable:hover .deliverable-img {
+      transform: scale(1.05);
     }
     .deliverable:hover .deliverable-visual svg.illust {
       transform: translateY(-4px) scale(1.02);
@@ -870,8 +873,8 @@
 
         <!-- ═══ 1. TEACHER: Sensi SMUTEK card + guide + elements ═══ -->
         <div class="deliverable">
-          <div class="deliverable-visual bg-warm">
-            <svg class="illust" viewBox="0 0 340 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <div class="deliverable-visual bg-warm">
+            <img src="dla_nauczyciela.png" alt="Podręcznik SensiBody i karty emocjonalno-ruchowe" class="deliverable-img">
               <defs>
                 <linearGradient id="sensiCardBg" x1="0" y1="0" x2="0.3" y2="1">
                   <stop offset="0" stop-color="#FDE8C8"/>
@@ -1140,8 +1143,8 @@
 
         <!-- ═══ 2. DIRECTOR: Professional analytics report ═══ -->
         <div class="deliverable">
-          <div class="deliverable-visual bg-slate">
-            <svg class="illust" viewBox="0 0 340 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <div class="deliverable-visual bg-slate">
+            <img src="dla_dyrektora.png" alt="Raport wdrożeniowy po 3 miesiącach" class="deliverable-img">
               <defs>
                 <linearGradient id="rpBg" x1="0" y1="0" x2="1" y2="1">
                   <stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F5F8FA"/>
@@ -1270,7 +1273,7 @@
         <!-- ═══ 3. INSTITUTION: Document stack + seal ═══ -->
         <div class="deliverable">
           <div class="deliverable-visual bg-green">
-            <svg class="illust" viewBox="0 0 340 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <img src="dla_szkoły.png" alt="Dokumentacja i szablony dla placówki" class="deliverable-img">
               <defs>
                 <linearGradient id="i3Bg" x1="0" y1="0" x2="0.5" y2="1">
                   <stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F2F9F6"/>
