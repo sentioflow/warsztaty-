@@ -68,9 +68,11 @@
       height: 64px;
     }
     .nav-logo {
-      font-family: 'Fraunces', serif;
-      font-size: 1.2rem; font-weight: 600; color: var(--slate);
-      letter-spacing: -0.02em;
+      display: flex; align-items: center;
+    }
+    .nav-logo img {
+      height: 40px; width: auto;
+      border-radius: 8px;
     }
     .nav-links {
       display: flex; align-items: center; gap: 28px; list-style: none;
@@ -704,7 +706,7 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="container nav-inner">
-      <a href="#" class="nav-logo">SensiBody</a>
+      <a href="#" class="nav-logo"><img src="logo.png" alt="SensiBody – emocje w ruchu"></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#co-dostaniesz">Co dostaniesz</a></li>
         <li><a href="#wyniki">Wyniki</a></li>
@@ -1188,7 +1190,7 @@
           <p>Napisz lokalizację i liczbę nauczycieli — przygotuję ofertę z dokładną kwotą, dostępnymi terminami i szczegółami pakietu.</p>
         </div>
         <div class="final-cta-actions">
-          <a href="mailto:kontakt@sensibody.pl" class="btn-warm">
+          <a href="/cdn-cgi/l/email-protection#573c383923363c2317243239243e3538332e79273b" class="btn-warm">
             Napisz do mnie
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </a>
@@ -1201,7 +1203,7 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-left">© 2026 SensiBody · Elżbieta Markiewicz</div>
+      <div class="footer-left"><img src="logo.png" alt="SensiBody" style="height: 28px; width: auto; vertical-align: middle; margin-right: 8px; border-radius: 6px;">© 2026 Elżbieta Markiewicz</div>
       <ul class="footer-links">
         <li><a href="#">Polityka prywatności</a></li>
         <li><a href="#">Regulamin</a></li>
@@ -1209,7 +1211,7 @@
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Nav scroll
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => {
@@ -1236,10 +1238,4 @@
 
     // Fade in
     const obs = new IntersectionObserver(
-      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }),
-      { threshold: 0.08 }
-    );
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-  </script>
-</body>
-</html>
+      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e
