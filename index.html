@@ -11,6 +11,109 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
+
+   .teacher-section { padding: 72px 0; background: var(--warm-light); }
+    .teacher-section .section-eyebrow { color: var(--warm); }
+    .teacher-header { text-align: center; margin-bottom: 48px; }
+    .teacher-time {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      background: var(--white); border: 2px solid var(--warm);
+      border-radius: 60px; padding: 14px 32px;
+      max-width: 420px; margin: 24px auto 0;
+      font-family: 'Fraunces', serif;
+    }
+    .teacher-time-number { font-size: 2rem; font-weight: 600; color: var(--warm); }
+    .teacher-time-label { font-size: 0.95rem; color: var(--text-secondary); text-align: left; line-height: 1.3; }
+    .teacher-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+      margin-bottom: 48px;
+    }
+    .teacher-scenario {
+      background: var(--white); border-radius: 16px;
+      padding: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .teacher-scenario-title {
+      font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 500;
+      color: var(--slate); margin-bottom: 4px;
+    }
+    .teacher-scenario-meta { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 16px; }
+    .teacher-scenario-steps { list-style: none; padding: 0; margin: 0; }
+    .teacher-scenario-steps li {
+      position: relative; padding-left: 28px; margin-bottom: 10px;
+      font-size: 0.92rem; color: var(--text-secondary); line-height: 1.5;
+    }
+    .teacher-scenario-steps li::before {
+      content: attr(data-step);
+      position: absolute; left: 0; top: 1px;
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--warm); color: var(--white);
+      font-size: 0.7rem; font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .teacher-scenario-effect {
+      margin-top: 16px; padding-top: 12px;
+      border-top: 1px solid #F0E6E0;
+      font-size: 0.85rem; color: var(--green-data); font-style: italic;
+    }
+    .teacher-structure {
+      background: var(--white); border-radius: 16px;
+      padding: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .teacher-structure-title {
+      font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 500;
+      color: var(--slate); margin-bottom: 16px;
+    }
+    .teacher-structure-steps { list-style: none; padding: 0; margin: 0; }
+    .teacher-structure-steps li {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid #F5EFEB;
+      font-size: 0.92rem; color: var(--text-secondary);
+    }
+    .teacher-structure-steps li:last-child { border-bottom: none; }
+    .teacher-structure-steps .step-icon {
+      flex-shrink: 0; width: 32px; height: 32px; border-radius: 8px;
+      background: var(--warm-light); color: var(--warm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.82rem; font-weight: 600;
+    }
+    .teacher-structure-note {
+      margin-top: 16px; padding: 12px 16px;
+      background: var(--green-data-light); border-radius: 8px;
+      font-size: 0.85rem; color: var(--green-data);
+    }
+    .teacher-bottom {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    }
+    .teacher-corner {
+      background: var(--white); border-radius: 16px;
+      padding: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .teacher-corner-title {
+      font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 500;
+      color: var(--slate); margin-bottom: 8px;
+    }
+    .teacher-corner-desc { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px; }
+    .teacher-corner-highlight {
+      background: var(--warm-light); border-radius: 8px; padding: 12px 16px;
+      font-size: 0.88rem; color: var(--warm); font-weight: 500; text-align: center;
+    }
+    .teacher-quote {
+      background: var(--slate); border-radius: 16px;
+      padding: 32px; display: flex; flex-direction: column; justify-content: center;
+    }
+    .teacher-quote blockquote {
+      font-family: 'Fraunces', serif; font-size: 1.15rem;
+      color: var(--white); font-style: italic; line-height: 1.6;
+      margin: 0 0 16px;
+    }
+    .teacher-quote cite {
+      font-style: normal; font-size: 0.85rem; color: #94A3B8;
+    }
+    @media (max-width: 768px) {
+      .teacher-grid, .teacher-bottom { grid-template-columns: 1fr; }
+    }
+
+    
   /* Crisis data */
 
   .crisis { padding: 72px 0; background: var(--slate); color: var(--white); }
@@ -960,6 +1063,66 @@
     </div>
   </section>
 
+  <!-- TEACHER: How it works in your classroom -->
+  <section class="teacher-section fade-in" id="w-klasie">
+    <div class="container">
+      <div class="teacher-header">
+        <div class="section-eyebrow">Dla nauczyciela</div>
+        <h2 class="section-heading">Jak to wygląda w&nbsp;Twojej klasie</h2>
+        <p class="section-desc">Nie potrzebujesz sali gimnastycznej, dodatkowej godziny ani specjalistycznego przygotowania. Wystarczy karta, telefon i&nbsp;kilka minut.</p>
+        <div class="teacher-time">
+          <div class="teacher-time-number">3–5 min</div>
+          <div class="teacher-time-label">Tyle trwa jedno ćwiczenie.<br>Wchodzi w&nbsp;każdą lekcję.</div>
+        </div>
+      </div>
+
+      <div class="teacher-grid">
+        <!-- Scenario -->
+        <div class="teacher-scenario">
+          <div class="teacher-scenario-title">Przerwa ruchowo-emocjonalna</div>
+          <div class="teacher-scenario-meta">W trakcie lekcji · 3–5 min · emocja: zmęczenie</div>
+          <ul class="teacher-scenario-steps">
+            <li data-step="1">Mówisz: „Zróbmy chwilę dla ciała. Wybierzemy dziś kartę Zmęczenie."</li>
+            <li data-step="2">Oglądacie krótki film — Sensi opowiada o&nbsp;senności, Nela pokazuje ruch.</li>
+            <li data-step="3">Dzieci klękają lub opierają dłonie o&nbsp;ławkę. Na wdechu: plecy w&nbsp;dół. Na wydechu: zaokrąglają plecy.</li>
+            <li data-step="4">Pytasz: „Czy czujesz, że plecy są lżejsze?"</li>
+          </ul>
+          <div class="teacher-scenario-effect">Efekt: znikają ziewnięcia i&nbsp;wiercenie się — wraca skupienie.</div>
+        </div>
+
+        <!-- Structure -->
+        <div class="teacher-structure">
+          <div class="teacher-structure-title">Stała struktura — zero stresu</div>
+          <ul class="teacher-structure-steps">
+            <li><span class="step-icon">1</span><span><strong>Check-in</strong> — „Jaka dziś pogoda w&nbsp;twoim ciele?" (słońce, chmury, burza)</span></li>
+            <li><span class="step-icon">2</span><span><strong>Rozgrzewka</strong> — kilka znanych ruchów, które „budzą ciało"</span></li>
+            <li><span class="step-icon">3</span><span><strong>Ćwiczenie</strong> — karta + film + wspólny ruch (3–5 min)</span></li>
+            <li><span class="step-icon">4</span><span><strong>Wyhamowanie</strong> — spowalnianie ruchu, oddech, spokój</span></li>
+            <li><span class="step-icon">5</span><span><strong>Refleksja</strong> — „Co się zmieniło w&nbsp;twoim ciele?"</span></li>
+          </ul>
+          <div class="teacher-structure-note">Powtarzalna struktura zdejmuje z&nbsp;Ciebie presję wymyślania. Prowadzisz tak samo za każdym razem — dzieci wiedzą, czego się spodziewać.</div>
+        </div>
+      </div>
+
+      <div class="teacher-bottom">
+        <!-- Emotion corner -->
+        <div class="teacher-corner">
+          <div class="teacher-corner-title">Kącik emocji Sensi</div>
+          <div class="teacher-corner-desc">Miejsce w&nbsp;klasie, gdzie leżą karty SensiBody. Dziecko samo podchodzi, wybiera kartę pasującą do emocji, skanuje QR&nbsp;kod i&nbsp;robi 3-minutowe ćwiczenie. Bez pytania o&nbsp;pozwolenie, bez przerywania lekcji.</div>
+          <div class="teacher-corner-highlight">Dzieci same sięgają po narzędzie — to najlepszy dowód, że metoda działa.</div>
+        </div>
+
+        <!-- Quote -->
+        <div class="teacher-quote">
+          <blockquote>„Po tym krótkim kołysaniu łatwiej przechodzimy do pracy. Widzę mniej napięcia i&nbsp;więcej uśmiechów."</blockquote>
+          <cite>— Nauczycielka klas I–III, faza testowa programu</cite>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
   <!-- DELIVERABLES -->
   <section class="deliverables fade-in" id="co-dostaniesz">
     <div class="container">
