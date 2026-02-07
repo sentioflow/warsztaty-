@@ -3,1930 +3,1470 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SensiBody – warsztaty emocjonalno-ruchowe dla nauczycieli. Pierwsza w Polsce metoda łącząca fizjoterapię dziecięcą z edukacją emocjonalną.">
-  <meta name="keywords" content="SensiBody, warsztaty dla nauczycieli, regulacja emocji, edukacja emocjonalna, fizjoterapia dziecięca">
-  <meta property="og:title" content="SensiBody – Warsztaty dla nauczycieli">
-  <meta property="og:description" content="Pierwsza w Polsce metoda łącząca fizjoterapię dziecięcą z edukacją emocjonalną. Poznaj, wdróż, zbuduj system.">
-  <meta property="og:type" content="website">
-  <title>SensiBody – Warsztaty emocjonalno-ruchowe dla nauczycieli</title>
-  
+  <meta name="description" content="Sensi Body — gotowa dokumentacja wdrożeniowa, raporty ewaluacyjne i narzędzia dla programu wychowawczo-profilaktycznego Twojej szkoły.">
+  <title>Sensi Body – Dokumentacja, raporty i narzędzia dla Twojej szkoły</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --cream: #FDF6F0;
-      --cream-deep: #F5EBE0;
-      --green: #2B7A6B;
-      --green-dark: #1E5C50;
-      --green-light: #E8F5F0;
-      --coral: #E8927C;
-      --coral-light: #FCEEE9;
-      --gold: #D4A853;
-      --gold-light: #FFF8E7;
-      --text: #2C3E3A;
-      --text-light: #5A706A;
-      --text-muted: #8A9E98;
-      --white: #FFFFFF;
-      --shadow-sm: 0 2px 8px rgba(43, 122, 107, 0.06);
-      --shadow-md: 0 8px 30px rgba(43, 122, 107, 0.08);
-      --shadow-lg: 0 16px 50px rgba(43, 122, 107, 0.12);
-      --shadow-coral: 0 8px 30px rgba(232, 146, 124, 0.15);
-      --radius: 16px;
-      --radius-sm: 10px;
-      --radius-lg: 24px;
+      --ink: #1a1f2e;
+      --ink-soft: #3d4663;
+      --ink-muted: #7a839c;
+      --surface: #f8f7f4;
+      --surface-warm: #faf6f0;
+      --card: #ffffff;
+      --accent: #b94e2f;
+      --accent-hover: #a3432a;
+      --accent-bg: #fdf3ef;
+      --accent-border: #f5d5c8;
+      --teal: #1a7a6d;
+      --teal-bg: #eef8f6;
+      --teal-border: #c2e5df;
+      --gold: #c49a2e;
+      --gold-bg: #fdf8ec;
+      --border: #e4e2dc;
+      --border-light: #eeedea;
+      --white: #ffffff;
+      --shadow-sm: 0 1px 3px rgba(26,31,46,0.06);
+      --shadow-md: 0 4px 20px rgba(26,31,46,0.08);
+      --shadow-lg: 0 12px 40px rgba(26,31,46,0.1);
+      --radius: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
     }
 
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; font-size:16px; }
 
     body {
-      font-family: 'Source Sans 3', -apple-system, sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
+      font-family:'DM Sans', system-ui, sans-serif;
+      background:var(--surface);
+      color:var(--ink);
+      line-height:1.72;
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
     }
 
-    h1, h2, h3, h4 {
-      font-family: 'DM Serif Display', Georgia, serif;
-      line-height: 1.25;
-      color: var(--text);
+    h1,h2,h3,h4 {
+      font-family:'DM Serif Display', Georgia, serif;
+      line-height:1.2;
+      letter-spacing:-0.01em;
     }
 
-    a {
-      color: var(--green);
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
+    a { color:inherit; text-decoration:none; transition:all .25s ease; }
 
-    img { max-width: 100%; }
+    .container { max-width:1080px; margin:0 auto; padding:0 24px; }
 
-    .container {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* ═══════════════════════════════════════════
-       NAV
-    ═══════════════════════════════════════════ */
+    /* ─── NAV ─── */
     .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: rgba(253, 246, 240, 0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(43, 122, 107, 0.06);
-      transition: all 0.4s ease;
+      position:fixed; top:0; left:0; right:0; z-index:100;
+      background:rgba(248,247,244,0.92);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--border);
     }
-
-    .nav.scrolled {
-      background: rgba(253, 246, 240, 0.95);
-      box-shadow: var(--shadow-sm);
-    }
-
     .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
+      display:flex; align-items:center; justify-content:space-between;
+      height:60px;
     }
-
     .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.35rem;
-      color: var(--green);
-      letter-spacing: -0.02em;
+      font-family:'DM Serif Display', serif;
+      font-size:1.15rem; color:var(--ink);
     }
-
-    .nav-logo svg {
-      width: 36px;
-      height: 36px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.92rem;
-      font-weight: 500;
-      color: var(--text-light);
-      position: relative;
-    }
-
-    .nav-links a:hover {
-      color: var(--green);
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--coral);
-      border-radius: 2px;
-      transition: width 0.3s ease;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
+    .nav-logo span { color:var(--accent); }
+    .nav-links { display:flex; gap:24px; list-style:none; align-items:center; }
+    .nav-links a { font-size:.85rem; font-weight:500; color:var(--ink-muted); }
+    .nav-links a:hover { color:var(--ink); }
     .nav-cta {
-      background: var(--green);
-      color: var(--white) !important;
-      padding: 10px 22px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 0.88rem;
-      letter-spacing: 0.02em;
+      background:var(--accent); color:var(--white) !important;
+      padding:8px 18px; border-radius:8px; font-weight:600; font-size:.83rem;
     }
+    .nav-cta:hover { background:var(--accent-hover); transform:translateY(-1px); }
+    .nav-mobile { display:none; background:none; border:none; cursor:pointer; padding:8px; }
+    .nav-mobile span { display:block; width:20px; height:2px; background:var(--ink); margin:5px 0; border-radius:2px; }
 
-    .nav-cta:hover {
-      background: var(--green-dark);
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .nav-cta::after { display: none !important; }
-
-    .nav-mobile-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-    }
-
-    .nav-mobile-toggle span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text);
-      margin: 5px 0;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    /* ═══════════════════════════════════════════
-       HERO
-    ═══════════════════════════════════════════ */
+    /* ─── HERO ─── */
     .hero {
-      padding: 140px 0 80px;
-      position: relative;
-      overflow: hidden;
+      padding:120px 0 64px;
+      background:linear-gradient(180deg, var(--surface) 0%, var(--surface-warm) 100%);
+      border-bottom:1px solid var(--border);
     }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -120px;
-      right: -100px;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(43, 122, 107, 0.04) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
+    .hero-layout {
+      display:grid; grid-template-columns:1fr 380px; gap:48px; align-items:center;
     }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 56px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--white);
-      color: var(--green);
-      padding: 8px 18px 8px 12px;
-      border-radius: 50px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      margin-bottom: 28px;
-      border: 1px solid rgba(43, 122, 107, 0.12);
-      animation: fadeInUp 0.8s ease both;
-      letter-spacing: 0.01em;
+      display:inline-flex; align-items:center; gap:8px;
+      background:var(--teal-bg); border:1px solid var(--teal-border);
+      padding:6px 14px; border-radius:100px;
+      font-size:.78rem; font-weight:600; color:var(--teal);
+      margin-bottom:20px;
     }
-
-    .hero-badge svg {
-      width: 18px;
-      height: 18px;
-      color: var(--green);
-      flex-shrink: 0;
-    }
-
+    .hero-badge svg { width:14px; height:14px; }
     .hero h1 {
-      font-size: clamp(2.2rem, 3.8vw, 3rem);
-      color: var(--text);
-      margin-bottom: 22px;
-      animation: fadeInUp 0.8s ease 0.1s both;
-      letter-spacing: -0.01em;
+      font-size:2.6rem; color:var(--ink);
+      margin-bottom:18px;
     }
-
     .hero h1 em {
-      font-style: italic;
-      color: var(--green);
+      font-style:italic; color:var(--accent);
+      background:linear-gradient(120deg, var(--accent-bg) 0%, transparent 100%);
+      padding:0 6px;
     }
-
-    .hero-subtitle {
-      font-size: 1.1rem;
-      color: var(--text-light);
-      line-height: 1.8;
-      margin-bottom: 36px;
-      max-width: 520px;
-      animation: fadeInUp 0.8s ease 0.2s both;
+    .hero-sub {
+      font-size:1.05rem; color:var(--ink-soft);
+      line-height:1.7; margin-bottom:28px; max-width:520px;
     }
-
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      animation: fadeInUp 0.8s ease 0.3s both;
-    }
-
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; }
     .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--green);
-      color: var(--white);
-      padding: 16px 32px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1rem;
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      display:inline-flex; align-items:center; gap:8px;
+      background:var(--accent); color:var(--white);
+      padding:13px 26px; border-radius:10px;
+      font-weight:600; font-size:.92rem;
+      border:none; cursor:pointer;
+      transition:all .25s ease;
+    }
+    .btn-primary:hover { background:var(--accent-hover); transform:translateY(-2px); box-shadow:var(--shadow-md); }
+    .btn-outline {
+      display:inline-flex; align-items:center; gap:8px;
+      background:var(--white); color:var(--ink);
+      padding:13px 26px; border-radius:10px;
+      font-weight:600; font-size:.92rem;
+      border:1px solid var(--border);
+      cursor:pointer; transition:all .25s ease;
+    }
+    .btn-outline:hover { border-color:var(--ink-muted); transform:translateY(-1px); }
+
+    /* Hero side card */
+    .hero-card {
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      padding:28px;
+      box-shadow:var(--shadow-md);
+      position:relative;
+    }
+    .hero-card::before {
+      content:'';
+      position:absolute; top:-1px; left:24px; right:24px;
+      height:3px; background:var(--accent);
+      border-radius:0 0 3px 3px;
+    }
+    .hero-card-title {
+      font-family:'DM Serif Display', serif;
+      font-size:1rem; margin-bottom:16px; color:var(--ink);
+    }
+    .hero-card-item {
+      display:flex; gap:12px; align-items:flex-start;
+      padding:10px 0;
+      border-bottom:1px solid var(--border-light);
+    }
+    .hero-card-item:last-child { border-bottom:none; }
+    .hero-card-icon {
+      width:32px; height:32px; border-radius:8px;
+      display:flex; align-items:center; justify-content:center;
+      flex-shrink:0; font-size:.85rem;
+    }
+    .hero-card-icon.doc { background:var(--accent-bg); color:var(--accent); }
+    .hero-card-icon.chart { background:var(--teal-bg); color:var(--teal); }
+    .hero-card-icon.cert { background:var(--gold-bg); color:var(--gold); }
+    .hero-card-item h4 {
+      font-family:'DM Sans', sans-serif;
+      font-size:.85rem; font-weight:600; line-height:1.3;
+    }
+    .hero-card-item p {
+      font-size:.78rem; color:var(--ink-muted); line-height:1.5; margin-top:2px;
     }
 
-    .btn-primary:hover {
-      background: var(--green-dark);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-      color: var(--white);
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: transparent;
-      color: var(--green);
-      padding: 16px 32px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1rem;
-      border: 2px solid rgba(43, 122, 107, 0.15);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--green);
-      background: var(--green-light);
-      transform: translateY(-2px);
-    }
-
-    .hero-visual {
-      animation: fadeInUp 0.8s ease 0.4s both;
-    }
-
-    .hero-evidence {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .evidence-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 28px 28px;
-      border: 1px solid rgba(43, 122, 107, 0.06);
-      transition: all 0.3s ease;
-    }
-
-    .evidence-card:hover {
-      box-shadow: var(--shadow-sm);
-    }
-
-    .evidence-card-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 16px;
-    }
-
-    .evidence-card-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .evidence-card-icon svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .evidence-card-icon.green {
-      background: var(--green-light);
-      color: var(--green);
-    }
-
-    .evidence-card-icon.coral {
-      background: var(--coral-light);
-      color: var(--coral);
-    }
-
-    .evidence-card-title {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.05rem;
-      color: var(--text);
-      line-height: 1.35;
-    }
-
-    .evidence-card p {
-      color: var(--text-light);
-      font-size: 0.9rem;
-      line-height: 1.65;
-    }
-
-    .evidence-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      background: rgba(43, 122, 107, 0.06);
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-
-    .evidence-stat {
-      background: var(--white);
-      text-align: center;
-      padding: 22px 12px;
-    }
-
-    .evidence-stat-number {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.8rem;
-      color: var(--green);
-      line-height: 1;
-    }
-
-    .evidence-stat-label {
-      font-size: 0.76rem;
-      color: var(--text-muted);
-      margin-top: 6px;
-      line-height: 1.4;
-    }
-
-    .evidence-trust {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 0 4px;
-    }
-
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .trust-item svg {
-      width: 16px;
-      height: 16px;
-      color: var(--green);
-      flex-shrink: 0;
-    }
-
-    /* ═══════════════════════════════════════════
-       SOCIAL PROOF BAR
-    ═══════════════════════════════════════════ */
-    .social-proof {
-      padding: 48px 0;
-      border-top: 1px solid rgba(43, 122, 107, 0.06);
-      border-bottom: 1px solid rgba(43, 122, 107, 0.06);
-    }
-
-    .social-proof-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 48px;
-      flex-wrap: wrap;
-    }
-
-    .social-proof-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    .social-proof-item svg {
-      width: 20px;
-      height: 20px;
-      color: var(--green);
-      flex-shrink: 0;
-    }
-
-    .social-proof-item strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    /* ═══════════════════════════════════════════
-       PROBLEM SECTION
-    ═══════════════════════════════════════════ */
+    /* ─── PROBLEM SECTION ─── */
     .problem {
-      padding: 100px 0;
+      padding:72px 0;
+      border-bottom:1px solid var(--border);
     }
-
+    .problem-header {
+      text-align:center; margin-bottom:48px;
+    }
     .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--coral);
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 16px;
+      display:inline-block;
+      font-size:.72rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--accent); margin-bottom:12px;
     }
-
-    .section-title {
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      max-width: 700px;
-      margin-bottom: 20px;
+    .problem-header h2 {
+      font-size:2rem; max-width:640px; margin:0 auto;
     }
-
-    .section-subtitle {
-      font-size: 1.1rem;
-      color: var(--text-light);
-      max-width: 600px;
-      margin-bottom: 56px;
-    }
-
     .problem-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      display:grid; grid-template-columns:repeat(4,1fr); gap:20px;
+    }
+    .stat-card {
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:24px 20px;
+      text-align:center;
+      transition:all .3s ease;
+    }
+    .stat-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); }
+    .stat-number {
+      font-family:'DM Serif Display', serif;
+      font-size:2.2rem; color:var(--accent);
+      line-height:1;
+    }
+    .stat-unit { font-size:1.1rem; }
+    .stat-label {
+      font-size:.82rem; color:var(--ink-soft);
+      margin-top:8px; line-height:1.45;
+    }
+    .stat-source {
+      font-size:.68rem; color:var(--ink-muted);
+      margin-top:6px;
     }
 
-    .problem-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 36px 28px;
-      transition: all 0.4s ease;
-      border: 1px solid rgba(43, 122, 107, 0.04);
+    .problem-quote {
+      margin-top:40px;
+      background:var(--accent-bg);
+      border-left:3px solid var(--accent);
+      border-radius:0 var(--radius) var(--radius) 0;
+      padding:24px 28px;
+      max-width:700px; margin-left:auto; margin-right:auto;
+    }
+    .problem-quote p {
+      font-size:.95rem; color:var(--ink-soft);
+      font-style:italic; line-height:1.7;
+    }
+    .problem-quote cite {
+      display:block; font-size:.78rem; color:var(--ink-muted);
+      font-style:normal; margin-top:8px;
     }
 
-    .problem-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
+    /* ─── WHAT YOU GET ─── */
+    .deliverables {
+      padding:72px 0;
+      background:var(--white);
+      border-bottom:1px solid var(--border);
+    }
+    .deliverables-header {
+      text-align:center; margin-bottom:56px;
+    }
+    .deliverables-header h2 { font-size:2rem; }
+    .deliverables-header p {
+      font-size:1rem; color:var(--ink-soft);
+      max-width:560px; margin:12px auto 0;
     }
 
-    .problem-card-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
+    .deliver-grid {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+    }
+    .deliver-card {
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      padding:32px 24px;
+      position:relative;
+      background:var(--surface);
+      transition:all .3s ease;
+    }
+    .deliver-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+    .deliver-card.highlight {
+      border-color:var(--accent);
+      background:var(--accent-bg);
+    }
+    .deliver-card.highlight::after {
+      content:'Największa wartość';
+      position:absolute; top:-10px; right:16px;
+      background:var(--accent); color:var(--white);
+      font-size:.68rem; font-weight:700;
+      padding:3px 10px; border-radius:100px;
+      text-transform:uppercase; letter-spacing:.05em;
+    }
+    .deliver-icon {
+      width:44px; height:44px;
+      border-radius:10px;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.3rem; margin-bottom:16px;
+    }
+    .deliver-icon.orange { background:var(--accent-bg); color:var(--accent); border:1px solid var(--accent-border); }
+    .deliver-icon.teal { background:var(--teal-bg); color:var(--teal); border:1px solid var(--teal-border); }
+    .deliver-icon.gold { background:var(--gold-bg); color:var(--gold); border:1px solid #eedcaa; }
+    .deliver-card h3 {
+      font-size:1.1rem; margin-bottom:10px;
+    }
+    .deliver-card p {
+      font-size:.87rem; color:var(--ink-soft); line-height:1.65;
+    }
+    .deliver-card .detail-list {
+      margin-top:14px; list-style:none;
+    }
+    .deliver-card .detail-list li {
+      font-size:.82rem; color:var(--ink-soft);
+      padding:5px 0; padding-left:18px;
+      position:relative; line-height:1.5;
+    }
+    .deliver-card .detail-list li::before {
+      content:'✓'; position:absolute; left:0;
+      color:var(--teal); font-weight:700; font-size:.75rem;
     }
 
-    .problem-card-icon svg {
-      width: 24px;
-      height: 24px;
+    /* ─── REPORT SECTION (the money section) ─── */
+    .report {
+      padding:72px 0;
+      border-bottom:1px solid var(--border);
+    }
+    .report-layout {
+      display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;
+    }
+    .report-content h2 {
+      font-size:1.9rem; margin-bottom:16px;
+    }
+    .report-content > p {
+      font-size:.95rem; color:var(--ink-soft); line-height:1.7;
+      margin-bottom:24px;
     }
 
-    .problem-card-icon.coral { background: var(--coral-light); color: var(--coral); }
-    .problem-card-icon.green { background: var(--green-light); color: var(--green); }
-    .problem-card-icon.gold { background: var(--gold-light); color: var(--gold); }
-
-    .problem-card h4 {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
+    .report-feature {
+      display:flex; gap:14px; align-items:flex-start;
+      margin-bottom:20px;
+    }
+    .report-feature-dot {
+      width:8px; height:8px; border-radius:50%;
+      background:var(--accent); margin-top:8px; flex-shrink:0;
+    }
+    .report-feature h4 {
+      font-family:'DM Sans', sans-serif;
+      font-size:.9rem; font-weight:600; margin-bottom:3px;
+    }
+    .report-feature p {
+      font-size:.83rem; color:var(--ink-muted); line-height:1.55;
     }
 
-    .problem-card p {
-      font-size: 0.92rem;
-      color: var(--text-light);
-      line-height: 1.7;
+    .report-mockup {
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+      box-shadow:var(--shadow-lg);
+    }
+    .report-mockup-bar {
+      background:var(--ink);
+      padding:12px 16px;
+      display:flex; align-items:center; gap:8px;
+    }
+    .report-mockup-dot {
+      width:8px; height:8px; border-radius:50%;
+    }
+    .report-mockup-dot.r { background:#ff5f57; }
+    .report-mockup-dot.y { background:#febc2e; }
+    .report-mockup-dot.g { background:#28c840; }
+    .report-mockup-body {
+      padding:28px 24px;
+    }
+    .mockup-header {
+      display:flex; align-items:center; justify-content:space-between;
+      margin-bottom:20px; padding-bottom:16px;
+      border-bottom:1px solid var(--border-light);
+    }
+    .mockup-header h4 {
+      font-family:'DM Serif Display', serif;
+      font-size:1rem;
+    }
+    .mockup-badge {
+      font-size:.68rem; font-weight:700;
+      background:var(--teal-bg); color:var(--teal);
+      padding:3px 10px; border-radius:100px;
+    }
+    .mockup-row {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:10px 0;
+      border-bottom:1px solid var(--border-light);
+    }
+    .mockup-row:last-child { border-bottom:none; }
+    .mockup-row-label { font-size:.8rem; color:var(--ink-soft); }
+    .mockup-row-bar {
+      width:140px; height:8px; background:var(--border-light); border-radius:4px;
+      overflow:hidden;
+    }
+    .mockup-row-fill {
+      height:100%; border-radius:4px;
+      background:var(--teal);
+    }
+    .mockup-row-value {
+      font-size:.78rem; font-weight:600; color:var(--ink); width:40px; text-align:right;
     }
 
-    .problem-stat {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2.2rem;
-      color: var(--coral);
-      margin-bottom: 6px;
+    /* ─── CURRICULUM ─── */
+    .curriculum {
+      padding:72px 0;
+      background:var(--white);
+      border-bottom:1px solid var(--border);
+    }
+    .curriculum-header {
+      text-align:center; margin-bottom:48px;
+    }
+    .curriculum-header h2 { font-size:1.9rem; }
+    .curriculum-header p {
+      font-size:.95rem; color:var(--ink-soft);
+      max-width:580px; margin:12px auto 0;
     }
 
-    /* ═══════════════════════════════════════════
-       METHOD
-    ═══════════════════════════════════════════ */
-    .method {
-      padding: 100px 0;
-      background: var(--white);
+    .curr-grid {
+      display:grid; grid-template-columns:repeat(2,1fr); gap:20px;
+    }
+    .curr-card {
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:24px;
+      display:flex; gap:16px; align-items:flex-start;
+    }
+    .curr-emoji {
+      font-size:1.5rem; width:40px; height:40px;
+      display:flex; align-items:center; justify-content:center;
+      flex-shrink:0;
+    }
+    .curr-card h4 {
+      font-family:'DM Sans', sans-serif;
+      font-size:.9rem; font-weight:600; margin-bottom:4px;
+    }
+    .curr-card p {
+      font-size:.82rem; color:var(--ink-muted); line-height:1.55;
+    }
+    .curr-note {
+      margin-top:32px;
+      text-align:center;
+      font-size:.82rem; color:var(--ink-muted);
+      padding:16px 24px;
+      background:var(--surface);
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+    }
+    .curr-note strong { color:var(--ink-soft); }
+
+    /* ─── HOW IT WORKS ─── */
+    .how {
+      padding:72px 0;
+      border-bottom:1px solid var(--border);
+    }
+    .how-header {
+      text-align:center; margin-bottom:48px;
+    }
+    .how-header h2 { font-size:1.9rem; }
+    .how-steps {
+      display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+      position:relative;
+    }
+    .how-steps::before {
+      content:'';
+      position:absolute; top:28px; left:12.5%; right:12.5%;
+      height:2px; background:var(--border);
+    }
+    .how-step {
+      text-align:center; padding:0 16px;
+      position:relative;
+    }
+    .how-step-num {
+      width:56px; height:56px; border-radius:50%;
+      background:var(--white); border:2px solid var(--border);
+      display:flex; align-items:center; justify-content:center;
+      margin:0 auto 16px;
+      font-family:'DM Serif Display', serif;
+      font-size:1.2rem; color:var(--accent);
+      position:relative; z-index:2;
+      transition:all .3s ease;
+    }
+    .how-step:hover .how-step-num {
+      background:var(--accent); color:var(--white);
+      border-color:var(--accent);
+    }
+    .how-step h4 {
+      font-family:'DM Sans', sans-serif;
+      font-size:.88rem; font-weight:600;
+      margin-bottom:6px;
+    }
+    .how-step p {
+      font-size:.8rem; color:var(--ink-muted); line-height:1.5;
     }
 
-    .method-steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      margin-top: 60px;
-      position: relative;
-    }
-
-    .method-steps::before {
-      content: '';
-      position: absolute;
-      top: 40px;
-      left: 15%;
-      right: 15%;
-      height: 2px;
-      background: linear-gradient(to right, var(--coral), var(--green), var(--gold));
-      opacity: 0.3;
-    }
-
-    .method-step {
-      text-align: center;
-      position: relative;
-    }
-
-    .method-step-number {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.8rem;
-      margin: 0 auto 24px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .method-step:nth-child(1) .method-step-number {
-      background: var(--coral-light);
-      color: var(--coral);
-    }
-
-    .method-step:nth-child(2) .method-step-number {
-      background: var(--green-light);
-      color: var(--green);
-    }
-
-    .method-step:nth-child(3) .method-step-number {
-      background: var(--gold-light);
-      color: var(--gold);
-    }
-
-    .method-step h4 {
-      font-size: 1.15rem;
-      margin-bottom: 10px;
-    }
-
-    .method-step p {
-      color: var(--text-light);
-      font-size: 0.92rem;
-    }
-
-    /* ═══════════════════════════════════════════
-       PRICING
-    ═══════════════════════════════════════════ */
+    /* ─── PRICING ─── */
     .pricing {
-      padding: 100px 0;
+      padding:72px 0;
+      background:var(--white);
+      border-bottom:1px solid var(--border);
     }
-
     .pricing-header {
-      text-align: center;
-      margin-bottom: 60px;
+      text-align:center; margin-bottom:48px;
+    }
+    .pricing-header h2 { font-size:1.9rem; }
+    .pricing-header p {
+      font-size:.95rem; color:var(--ink-soft);
+      max-width:520px; margin:12px auto 0;
     }
 
-    .pricing-header .section-title {
-      margin-left: auto;
-      margin-right: auto;
+    .pricing-cards {
+      display:grid; grid-template-columns:repeat(2,1fr); gap:24px;
+      max-width:860px; margin:0 auto;
+    }
+    .price-card {
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      padding:36px 28px;
+      background:var(--surface);
+      position:relative;
+    }
+    .price-card.featured {
+      border-color:var(--accent);
+      background:var(--white);
+      box-shadow:var(--shadow-lg);
+    }
+    .price-card.featured::before {
+      content:'Rekomendowany';
+      position:absolute; top:-10px; left:50%; transform:translateX(-50%);
+      background:var(--accent); color:var(--white);
+      font-size:.68rem; font-weight:700;
+      padding:3px 14px; border-radius:100px;
+      text-transform:uppercase; letter-spacing:.05em;
+    }
+    .price-card-label {
+      font-size:.72rem; font-weight:700; text-transform:uppercase;
+      letter-spacing:.1em; color:var(--ink-muted);
+      margin-bottom:8px;
+    }
+    .price-card h3 { font-size:1.3rem; margin-bottom:6px; }
+    .price-card-desc {
+      font-size:.84rem; color:var(--ink-muted); margin-bottom:20px;
+      line-height:1.55;
+    }
+    .price-amount {
+      font-family:'DM Serif Display', serif;
+      font-size:2.2rem; color:var(--ink);
+    }
+    .price-amount span { font-size:.9rem; color:var(--ink-muted); font-family:'DM Sans', sans-serif; }
+    .price-per {
+      font-size:.78rem; color:var(--ink-muted); margin-top:2px; margin-bottom:20px;
+    }
+    .price-divider {
+      height:1px; background:var(--border); margin:20px 0;
+    }
+    .price-features {
+      list-style:none;
+    }
+    .price-features li {
+      font-size:.84rem; color:var(--ink-soft);
+      padding:6px 0 6px 22px;
+      position:relative; line-height:1.5;
+    }
+    .price-features li::before {
+      content:'✓'; position:absolute; left:0;
+      font-weight:700; font-size:.75rem;
+    }
+    .price-card.featured .price-features li::before { color:var(--accent); }
+    .price-features li::before { color:var(--teal); }
+    .price-features li.extra {
+      color:var(--accent); font-weight:600;
+    }
+    .price-btn {
+      display:block; width:100%; margin-top:24px;
+      padding:13px; border-radius:10px; text-align:center;
+      font-weight:600; font-size:.9rem; cursor:pointer;
+      border:none; transition:all .25s ease;
+    }
+    .price-btn.primary {
+      background:var(--accent); color:var(--white);
+    }
+    .price-btn.primary:hover { background:var(--accent-hover); transform:translateY(-2px); }
+    .price-btn.secondary {
+      background:var(--white); color:var(--ink);
+      border:1px solid var(--border);
+    }
+    .price-btn.secondary:hover { border-color:var(--ink-muted); }
+
+    .pricing-note {
+      text-align:center; margin-top:32px;
+      font-size:.82rem; color:var(--ink-muted);
+      max-width:600px; margin-left:auto; margin-right:auto;
     }
 
-    .pricing-header .section-subtitle {
-      margin-left: auto;
-      margin-right: auto;
+    /* ─── SCIENCE ─── */
+    .science {
+      padding:72px 0;
+      border-bottom:1px solid var(--border);
     }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      align-items: start;
+    .science-header {
+      text-align:center; margin-bottom:48px;
     }
-
-    .pricing-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 40px 32px;
-      position: relative;
-      transition: all 0.4s ease;
-      border: 2px solid transparent;
+    .science-header h2 { font-size:1.9rem; }
+    .science-cols {
+      display:grid; grid-template-columns:1fr 1fr; gap:32px;
     }
-
-    .pricing-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-lg);
+    .science-col h4 {
+      font-family:'DM Sans', sans-serif;
+      font-size:.9rem; font-weight:600;
+      margin-bottom:12px;
+      padding-bottom:8px;
+      border-bottom:2px solid var(--accent);
+      display:inline-block;
     }
-
-    .pricing-card.featured {
-      border-color: var(--green);
-      box-shadow: var(--shadow-lg);
-      transform: scale(1.03);
+    .science-ref {
+      font-size:.82rem; color:var(--ink-soft);
+      padding:8px 0;
+      border-bottom:1px solid var(--border-light);
+      line-height:1.55;
     }
+    .science-ref:last-child { border-bottom:none; }
 
-    .pricing-card.featured:hover {
-      transform: scale(1.03) translateY(-6px);
-    }
-
-    .pricing-featured-badge {
-      position: absolute;
-      top: -14px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--green);
-      color: var(--white);
-      padding: 6px 20px;
-      border-radius: 50px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      white-space: nowrap;
-    }
-
-    .pricing-tier-label {
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 8px;
-    }
-
-    .pricing-card:nth-child(1) .pricing-tier-label { color: var(--coral); }
-    .pricing-card:nth-child(2) .pricing-tier-label { color: var(--green); }
-    .pricing-card:nth-child(3) .pricing-tier-label { color: var(--gold); }
-
-    .pricing-name {
-      font-size: 1.4rem;
-      margin-bottom: 8px;
-    }
-
-    .pricing-tagline {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-      min-height: 44px;
-    }
-
-    .pricing-price {
-      margin-bottom: 8px;
-    }
-
-    .pricing-amount {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2.8rem;
-      color: var(--text);
-      line-height: 1;
-    }
-
-    .pricing-amount span {
-      font-size: 1rem;
-      font-family: 'Source Sans 3', sans-serif;
-      color: var(--text-muted);
-      font-weight: 400;
-    }
-
-    .pricing-meta {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 28px;
-      padding-bottom: 28px;
-      border-bottom: 1px solid rgba(43, 122, 107, 0.08);
-    }
-
-    .pricing-meta-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-    }
-
-    .pricing-meta-item svg {
-      width: 16px;
-      height: 16px;
-      flex-shrink: 0;
-    }
-
-    .pricing-features {
-      list-style: none;
-      margin-bottom: 32px;
-    }
-
-    .pricing-features li {
-      padding: 8px 0;
-      font-size: 0.92rem;
-      color: var(--text-light);
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      line-height: 1.5;
-    }
-
-    .pricing-features li svg {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-      margin-top: 2px;
-      color: var(--green);
-    }
-
-    .pricing-features li.highlight {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .pricing-features li.disabled {
-      color: var(--text-muted);
-      opacity: 0.5;
-    }
-
-    .pricing-features li.disabled svg {
-      color: var(--text-muted);
-    }
-
-    .pricing-cta {
-      width: 100%;
-      padding: 16px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-align: center;
-      display: block;
-    }
-
-    .pricing-cta.primary {
-      background: var(--green);
-      color: var(--white);
-      border: none;
-    }
-
-    .pricing-cta.primary:hover {
-      background: var(--green-dark);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .pricing-cta.outline {
-      background: transparent;
-      color: var(--green);
-      border: 2px solid rgba(43, 122, 107, 0.2);
-    }
-
-    .pricing-cta.outline:hover {
-      border-color: var(--green);
-      background: var(--green-light);
-    }
-
-    /* ═══════════════════════════════════════════
-       ADDONS
-    ═══════════════════════════════════════════ */
-    .addons {
-      padding: 0 0 100px;
-    }
-
-    .addons-container {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 48px;
-      border: 1px solid rgba(43, 122, 107, 0.06);
-    }
-
-    .addons-header {
-      margin-bottom: 32px;
-    }
-
-    .addons-header h3 {
-      font-size: 1.5rem;
-      margin-bottom: 8px;
-    }
-
-    .addons-header p {
-      color: var(--text-light);
-      font-size: 0.95rem;
-    }
-
-    .addons-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-    }
-
-    .addon-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 24px;
-      background: var(--cream);
-      border-radius: var(--radius-sm);
-      transition: all 0.3s ease;
-    }
-
-    .addon-item:hover {
-      background: var(--cream-deep);
-    }
-
-    .addon-info {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .addon-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      background: var(--white);
-    }
-
-    .addon-name {
-      font-weight: 600;
-      font-size: 0.92rem;
-    }
-
-    .addon-desc {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .addon-price {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.15rem;
-      color: var(--green);
-      white-space: nowrap;
-    }
-
-    /* ═══════════════════════════════════════════
-       ABOUT / CREDENTIALS
-    ═══════════════════════════════════════════ */
+    /* ─── ABOUT ─── */
     .about {
-      padding: 100px 0;
-      background: var(--white);
+      padding:72px 0;
+      background:var(--white);
+      border-bottom:1px solid var(--border);
     }
-
-    .about-inner {
-      display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: 60px;
-      align-items: center;
+    .about-layout {
+      display:grid; grid-template-columns:200px 1fr; gap:40px; align-items:start;
+      max-width:720px; margin:0 auto;
     }
-
-    .about-visual {
-      position: relative;
+    .about-photo {
+      width:200px; height:240px;
+      background:var(--surface);
+      border-radius:var(--radius-lg);
+      border:1px solid var(--border);
+      display:flex; align-items:center; justify-content:center;
+      font-size:3rem;
     }
-
-    .about-image-placeholder {
-      background: linear-gradient(145deg, var(--coral-light), var(--green-light));
-      border-radius: var(--radius-lg);
-      aspect-ratio: 4 / 5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 16px;
-      color: var(--text-muted);
-      font-size: 0.9rem;
+    .about-content h2 { font-size:1.5rem; margin-bottom:12px; }
+    .about-content p {
+      font-size:.9rem; color:var(--ink-soft); line-height:1.7;
+      margin-bottom:12px;
     }
-
-    .about-image-placeholder svg {
-      width: 48px;
-      height: 48px;
-      opacity: 0.4;
-    }
-
-    .about-credentials {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 32px;
-    }
-
-    .credential {
-      background: var(--cream);
-      padding: 20px;
-      border-radius: var(--radius-sm);
-    }
-
-    .credential-number {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.8rem;
-      color: var(--green);
-    }
-
-    .credential-text {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      margin-top: 4px;
-    }
-
-    .about-name {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--coral);
-      margin-bottom: 12px;
-    }
-
-    .about h2 {
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
-      margin-bottom: 20px;
-    }
-
-    .about-text {
-      color: var(--text-light);
-      font-size: 1rem;
-      margin-bottom: 16px;
-      line-height: 1.8;
-    }
-
     .about-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 24px;
+      display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;
     }
-
     .about-tag {
-      background: var(--green-light);
-      color: var(--green);
-      padding: 6px 14px;
-      border-radius: 50px;
-      font-size: 0.82rem;
-      font-weight: 600;
+      font-size:.72rem; font-weight:600;
+      padding:4px 12px; border-radius:100px;
+      background:var(--surface); border:1px solid var(--border);
+      color:var(--ink-soft);
     }
 
-    /* ═══════════════════════════════════════════
-       TESTIMONIALS
-    ═══════════════════════════════════════════ */
-    .testimonials {
-      padding: 100px 0;
+    /* ─── CTA ─── */
+    .cta {
+      padding:80px 0;
+      background:var(--ink);
+      color:var(--white);
     }
-
-    .testimonials-header {
-      text-align: center;
-      margin-bottom: 48px;
+    .cta-inner {
+      text-align:center; max-width:600px; margin:0 auto;
     }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+    .cta-inner h2 {
+      font-size:2rem; color:var(--white); margin-bottom:14px;
     }
-
-    .testimonial-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 32px;
-      transition: all 0.3s ease;
+    .cta-inner p {
+      font-size:1rem; color:rgba(255,255,255,0.7);
+      margin-bottom:28px; line-height:1.7;
     }
-
-    .testimonial-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
+    .cta-actions {
+      display:flex; gap:12px; justify-content:center; flex-wrap:wrap;
     }
-
-    .testimonial-stars {
-      color: var(--gold);
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-      margin-bottom: 16px;
-    }
-
-    .testimonial-text {
-      font-size: 0.95rem;
-      color: var(--text-light);
-      line-height: 1.7;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .testimonial-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--green-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: var(--green);
-      font-size: 0.9rem;
-    }
-
-    .testimonial-name {
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .testimonial-role {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    /* ═══════════════════════════════════════════
-       FAQ
-    ═══════════════════════════════════════════ */
-    .faq {
-      padding: 100px 0;
-      background: var(--white);
-    }
-
-    .faq-header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .faq-list {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid rgba(43, 122, 107, 0.08);
-    }
-
-    .faq-question {
-      width: 100%;
-      background: none;
-      border: none;
-      padding: 24px 0;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--text);
-      text-align: left;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      font-family: 'Source Sans 3', sans-serif;
-    }
-
-    .faq-question:hover { color: var(--green); }
-
-    .faq-icon {
-      width: 24px;
-      height: 24px;
-      flex-shrink: 0;
-      transition: transform 0.3s ease;
-      color: var(--green);
-    }
-
-    .faq-item.active .faq-icon {
-      transform: rotate(45deg);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.4s ease;
-    }
-
-    .faq-item.active .faq-answer {
-      max-height: 300px;
-    }
-
-    .faq-answer-inner {
-      padding-bottom: 24px;
-      color: var(--text-light);
-      font-size: 0.95rem;
-      line-height: 1.7;
-    }
-
-    /* ═══════════════════════════════════════════
-       CTA SECTION
-    ═══════════════════════════════════════════ */
-    .cta-section {
-      padding: 100px 0;
-    }
-
-    .cta-card {
-      background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
-      border-radius: var(--radius-lg);
-      padding: 72px 48px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-card::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .cta-card::after {
-      content: '';
-      position: absolute;
-      bottom: -30%;
-      left: -10%;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(232, 146, 124, 0.15) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .cta-card > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-card h2 {
-      color: var(--white);
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      margin-bottom: 16px;
-    }
-
-    .cta-card p {
-      color: rgba(255,255,255,0.8);
-      font-size: 1.1rem;
-      max-width: 520px;
-      margin: 0 auto 36px;
-    }
-
     .btn-white {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--white);
-      color: var(--green);
-      padding: 16px 36px;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 1rem;
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      display:inline-flex; align-items:center; gap:8px;
+      background:var(--white); color:var(--ink);
+      padding:14px 28px; border-radius:10px;
+      font-weight:600; font-size:.92rem;
+      border:none; cursor:pointer;
+      transition:all .25s ease;
     }
-
-    .btn-white:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-      color: var(--green-dark);
+    .btn-white:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(0,0,0,0.2); }
+    .btn-ghost {
+      display:inline-flex; align-items:center; gap:8px;
+      background:transparent; color:var(--white);
+      padding:14px 28px; border-radius:10px;
+      font-weight:600; font-size:.92rem;
+      border:1px solid rgba(255,255,255,0.25);
+      cursor:pointer; transition:all .25s ease;
     }
+    .btn-ghost:hover { border-color:rgba(255,255,255,0.5); background:rgba(255,255,255,0.05); }
 
-    /* ═══════════════════════════════════════════
-       FOOTER
-    ═══════════════════════════════════════════ */
+    /* ─── FOOTER ─── */
     .footer {
-      padding: 48px 0;
-      border-top: 1px solid rgba(43, 122, 107, 0.08);
+      padding:32px 0;
+      border-top:1px solid var(--border);
+      text-align:center;
+    }
+    .footer p {
+      font-size:.78rem; color:var(--ink-muted); line-height:1.6;
+    }
+    .footer a { text-decoration:underline; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width:900px) {
+      .hero-layout { grid-template-columns:1fr; }
+      .hero-card { max-width:420px; }
+      .hero h1 { font-size:2rem; }
+      .problem-grid { grid-template-columns:repeat(2,1fr); }
+      .deliver-grid { grid-template-columns:1fr; }
+      .report-layout { grid-template-columns:1fr; }
+      .curr-grid { grid-template-columns:1fr; }
+      .how-steps { grid-template-columns:repeat(2,1fr); gap:24px; }
+      .how-steps::before { display:none; }
+      .pricing-cards { grid-template-columns:1fr; max-width:420px; }
+      .science-cols { grid-template-columns:1fr; }
+      .about-layout { grid-template-columns:1fr; text-align:center; }
+      .about-photo { margin:0 auto; }
+      .about-tags { justify-content:center; }
     }
 
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
+    @media (max-width:640px) {
+      .nav-links { display:none; }
+      .nav-links.open {
+        display:flex; flex-direction:column;
+        position:absolute; top:60px; left:0; right:0;
+        background:var(--surface); border-bottom:1px solid var(--border);
+        padding:16px 24px; gap:12px;
+      }
+      .nav-mobile { display:block; }
+      .hero { padding:100px 0 48px; }
+      .hero h1 { font-size:1.7rem; }
+      .hero-sub { font-size:.92rem; }
+      .problem-grid { grid-template-columns:1fr 1fr; }
+      .stat-number { font-size:1.7rem; }
+      .how-steps { grid-template-columns:1fr 1fr; }
+      h2 { font-size:1.5rem !important; }
+      .pricing-note { padding:0 12px; }
     }
 
-    .footer-left {
-      font-size: 0.88rem;
-      color: var(--text-muted);
+    /* ─── METHOD (3 steps) ─── */
+    .method {
+      padding:72px 0;
+      border-bottom:1px solid var(--border);
+    }
+    .method-header { text-align:center; margin-bottom:48px; }
+    .method-header h2 { font-size:1.9rem; }
+    .method-header p {
+      font-size:.95rem; color:var(--ink-soft);
+      max-width:520px; margin:10px auto 0;
+    }
+    .method-steps {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:0;
+      position:relative; max-width:900px; margin:0 auto;
+    }
+    .method-steps::before {
+      content:''; position:absolute;
+      top:36px; left:16.5%; right:16.5%;
+      height:2px; background:var(--border);
+    }
+    .method-step { text-align:center; padding:0 20px; position:relative; }
+    .method-step-circle {
+      width:72px; height:72px; border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      margin:0 auto 18px; position:relative; z-index:2;
+      font-family:'DM Serif Display', serif;
+      font-size:1.6rem; font-weight:400;
+      transition:transform .3s ease;
+    }
+    .method-step:hover .method-step-circle { transform:scale(1.08); }
+    .method-step:nth-child(1) .method-step-circle { background:#fce4de; color:var(--accent); }
+    .method-step:nth-child(2) .method-step-circle { background:var(--teal-bg); color:var(--teal); }
+    .method-step:nth-child(3) .method-step-circle { background:#fdf5e6; color:#b8860b; }
+    .method-step h4 {
+      font-size:1.05rem; margin-bottom:8px;
+    }
+    .method-step p {
+      font-size:.85rem; color:var(--ink-muted); line-height:1.6;
+      max-width:260px; margin:0 auto;
     }
 
-    .footer-links {
-      display: flex;
-      gap: 24px;
-      list-style: none;
+    /* ─── ADDONS ─── */
+    .addons {
+      padding:72px 0;
+      border-bottom:1px solid var(--border);
+    }
+    .addons-header { margin-bottom:36px; }
+    .addons-header h2 { font-size:1.6rem; }
+    .addons-header p {
+      font-size:.9rem; color:var(--ink-soft); margin-top:6px;
+    }
+    .addons-grid {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
+      margin-bottom:16px;
+    }
+    .addon-card {
+      background:var(--surface-warm);
+      border:1px solid var(--border-light);
+      border-radius:var(--radius);
+      padding:20px;
+      display:flex; align-items:center; gap:16px;
+      transition:all .25s ease;
+    }
+    .addon-card:hover { transform:translateY(-2px); box-shadow:var(--shadow-sm); }
+    .addon-icon {
+      width:40px; height:40px; border-radius:10px;
+      display:flex; align-items:center; justify-content:center;
+      background:var(--white); border:1px solid var(--border);
+      color:var(--teal); font-size:1.1rem; flex-shrink:0;
+    }
+    .addon-info { flex:1; }
+    .addon-info h4 {
+      font-family:'DM Sans', sans-serif;
+      font-size:.88rem; font-weight:600; line-height:1.3;
+    }
+    .addon-info p {
+      font-size:.75rem; color:var(--ink-muted); margin-top:2px;
+    }
+    .addon-price {
+      font-family:'DM Serif Display', serif;
+      font-size:1.25rem; color:var(--teal);
+      white-space:nowrap;
+    }
+    .addons-single {
+      display:inline-flex;
     }
 
-    .footer-links a {
-      font-size: 0.88rem;
-      color: var(--text-muted);
+    /* ─── FAQ ─── */
+    .faq {
+      padding:72px 0;
+      border-bottom:1px solid var(--border);
+    }
+    .faq-header { text-align:center; margin-bottom:40px; }
+    .faq-header h2 { font-size:1.9rem; }
+    .faq-list {
+      max-width:720px; margin:0 auto;
+    }
+    .faq-item {
+      border-bottom:1px solid var(--border);
+    }
+    .faq-question {
+      width:100%; background:none; border:none;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:20px 0; cursor:pointer;
+      font-family:'DM Sans', sans-serif;
+      font-size:.95rem; font-weight:500; color:var(--ink);
+      text-align:left; line-height:1.4;
+      transition:color .2s ease;
+    }
+    .faq-question:hover { color:var(--accent); }
+    .faq-icon {
+      width:28px; height:28px; flex-shrink:0; margin-left:16px;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.3rem; color:var(--teal); font-weight:300;
+      transition:transform .3s ease;
+    }
+    .faq-item.open .faq-icon { transform:rotate(45deg); }
+    .faq-answer {
+      max-height:0; overflow:hidden;
+      transition:max-height .35s ease, padding .35s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height:300px;
+      padding-bottom:20px;
+    }
+    .faq-answer p {
+      font-size:.87rem; color:var(--ink-soft); line-height:1.7;
     }
 
-    .footer-links a:hover {
-      color: var(--green);
+    @media (max-width:900px) {
+      .method-steps { grid-template-columns:1fr; gap:32px; }
+      .method-steps::before { display:none; }
+      .addons-grid { grid-template-columns:1fr; }
+    }
+    @media (max-width:640px) {
+      .method-steps { grid-template-columns:1fr; }
+      .addons-grid { grid-template-columns:1fr; }
     }
 
-    /* ═══════════════════════════════════════════
-       ANIMATIONS
-    ═══════════════════════════════════════════ */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(24px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(20px); }
+      to { opacity:1; transform:translateY(0); }
     }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+    .animate-in {
+      opacity:0; transform:translateY(20px);
+      transition:opacity .6s ease, transform .6s ease;
     }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ═══════════════════════════════════════════
-       RESPONSIVE
-    ═══════════════════════════════════════════ */
-    @media (max-width: 1024px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .hero-visual { max-width: 520px; }
-
-      .pricing-grid {
-        grid-template-columns: 1fr;
-        max-width: 440px;
-        margin: 0 auto;
-      }
-
-      .pricing-card.featured {
-        transform: none;
-        order: -1;
-      }
-
-      .pricing-card.featured:hover {
-        transform: translateY(-6px);
-      }
-
-      .about-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .about-visual {
-        max-width: 400px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .nav-mobile-toggle { display: block; }
-
-      .nav-links.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-        background: var(--cream);
-        padding: 24px;
-        box-shadow: var(--shadow-md);
-        gap: 20px;
-      }
-
-      .problem-grid,
-      .method-steps,
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .method-steps::before { display: none; }
-
-      .hero { padding: 110px 0 60px; }
-
-      .hero-actions {
-        flex-direction: column;
-      }
-
-      .hero-actions a, .hero-actions button {
-        text-align: center;
-        justify-content: center;
-      }
-
-      .social-proof-inner {
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .evidence-trust {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .addons-container { padding: 32px 20px; }
-      .cta-card { padding: 48px 24px; }
-      .about-credentials { grid-template-columns: 1fr; }
+    .animate-in.visible {
+      opacity:1; transform:translateY(0);
     }
   </style>
 </head>
 <body>
 
   <!-- NAV -->
-  <nav class="nav" id="nav">
+  <nav class="nav" role="navigation">
     <div class="container nav-inner">
-      <a href="#" class="nav-logo">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="22" r="14" fill="#E8927C" opacity="0.15"/>
-          <path d="M12 28c0-6 4-14 8-14s8 8 8 14" stroke="#2B7A6B" stroke-width="2" stroke-linecap="round"/>
-          <path d="M14 16l-3-6M26 16l3-6" stroke="#D4A853" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="17" cy="23" r="1.5" fill="#2B7A6B"/>
-          <circle cx="23" cy="23" r="1.5" fill="#2B7A6B"/>
-          <path d="M18 26c1 1 3 1 4 0" stroke="#2B7A6B" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        SensiBody
-      </a>
-
+      <a href="#" class="nav-logo">Sensi<span>Body</span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#metoda">Metoda</a></li>
-        <li><a href="#pakiety">Pakiety</a></li>
-        <li><a href="#prowadzaca">O prowadzącej</a></li>
+        <li><a href="#method">Metoda</a></li>
+        <li><a href="#deliverables">Co otrzymujesz</a></li>
+        <li><a href="#report">Raport</a></li>
+        <li><a href="#pricing">Pakiety</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#kontakt" class="nav-cta">Umów warsztat</a></li>
+        <li><a href="#contact" class="nav-cta">Umów rozmowę</a></li>
       </ul>
-
-      <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <button class="nav-mobile" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-content">
+  <section class="hero" id="hero">
+    <div class="container hero-layout">
+      <div>
         <div class="hero-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-          Innowacja społeczna · Program UE
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2 5h5l-4 3.5 1.5 5L8 10.5 3.5 13.5 5 8.5 1 5h5z"/></svg>
+          Innowacja społeczna · Europejski Fundusz Społeczny Plus
         </div>
-        <h1>Szkolenie dla rady pedagogicznej, które <em>naprawdę zmienia pracę z&nbsp;emocjami</em></h1>
-        <p class="hero-subtitle">
-          SensiBody to autorska metoda łącząca fizjoterapię dziecięcą z&nbsp;edukacją emocjonalną. Nauczyciele dostają gotowe karty, scenariusze i&nbsp;filmy — działające od&nbsp;następnego dnia.
+        <h1>Gotowy program emocjonalno-ruchowy <em>z dokumentacją</em> dla Twojej szkoły</h1>
+        <p class="hero-sub">
+          Sensi Body to nie tylko karty i filmy. To kompletny system z arkuszami obserwacji, narzędziami ewaluacyjnymi i gotową dokumentacją, którą możesz włączyć do programu wychowawczo-profilaktycznego szkoły.
         </p>
         <div class="hero-actions">
-          <a href="#pakiety" class="btn-primary">
-            Zobacz pakiety warsztatów
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="#metoda" class="btn-secondary">Jak działa metoda</a>
+          <a href="#contact" class="btn-primary">Umów bezpłatną rozmowę →</a>
+          <a href="#deliverables" class="btn-outline">Zobacz, co otrzymujesz</a>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="hero-evidence">
-          <div class="evidence-card">
-            <div class="evidence-card-header">
-              <div class="evidence-card-icon green">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-              </div>
-              <div class="evidence-card-title">Autorska sekwencja SensiBody</div>
-            </div>
-            <p>Czuję ciałem → Ruszam ciałem → Sprawdzam siebie. Trzy kroki, które nauczyciel wdraża na lekcji, świetlicy i&nbsp;zajęciach rewalidacyjnych — bez dodatkowego przygotowania.</p>
-          </div>
-
-          <div class="evidence-stats">
-            <div class="evidence-stat">
-              <div class="evidence-stat-number">85%</div>
-              <div class="evidence-stat-label">pozytywnych ocen nauczycieli</div>
-            </div>
-            <div class="evidence-stat">
-              <div class="evidence-stat-number">40%</div>
-              <div class="evidence-stat-label">wzrost świadomości ciała u&nbsp;dzieci</div>
-            </div>
-            <div class="evidence-stat">
-              <div class="evidence-stat-number">25%</div>
-              <div class="evidence-stat-label">redukcja konfliktów w&nbsp;klasie</div>
-            </div>
-          </div>
-
-          <div class="evidence-trust">
-            <div class="trust-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              Testowane na 80–100 dzieci
-            </div>
-            <div class="trust-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-              Zgodne z podstawą programową
-            </div>
+      <div class="hero-card">
+        <div class="hero-card-title">W pakiecie otrzymujesz:</div>
+        <div class="hero-card-item">
+          <div class="hero-card-icon doc">📋</div>
+          <div>
+            <h4>Arkusze obserwacji i ewaluacji</h4>
+            <p>Gotowe narzędzia do monitorowania postępów dzieci — do wklejenia w dokumentację szkoły</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOCIAL PROOF -->
-  <section class="social-proof">
-    <div class="container social-proof-inner">
-      <div class="social-proof-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-        <span>Program <strong>WŁĄCZ POPOJUTRZE!</strong> – grant UE</span>
-      </div>
-      <div class="social-proof-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span>Przetestowane na <strong>80–100 dzieci</strong></span>
-      </div>
-      <div class="social-proof-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span>Autorka: <strong>fizjoterapeutka dziecięca</strong>, 10 lat doświadczenia</span>
+        <div class="hero-card-item">
+          <div class="hero-card-icon chart">📊</div>
+          <div>
+            <h4>Raport podsumowujący wdrożenie</h4>
+            <p>Zbiorcze dane z obserwacji do programu wychowawczo-profilaktycznego</p>
+          </div>
+        </div>
+        <div class="hero-card-item">
+          <div class="hero-card-icon doc">📖</div>
+          <div>
+            <h4>10 kart emocji + 10 filmów z ćwiczeniami</h4>
+            <p>Materiały dydaktyczne gotowe do pracy od pierwszego dnia</p>
+          </div>
+        </div>
+        <div class="hero-card-item">
+          <div class="hero-card-icon cert">🎓</div>
+          <div>
+            <h4>Szkolenie rady pedagogicznej</h4>
+            <p>3-godzinne szkolenie stacjonarne + zaświadczenie o ukończeniu</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- PROBLEM -->
-  <section class="problem fade-in">
+  <section class="problem" id="problem">
     <div class="container">
-      <div class="section-label">Dlaczego to ważne</div>
-      <h2 class="section-title">25–35% dzieci ma problemy z&nbsp;regulacją emocji przez ciało</h2>
-      <p class="section-subtitle">To 200–250 tys. dzieci w klasach I–III i&nbsp;ostatnim etapie przedszkolnym. Nauczyciele potrzebują narzędzi, które działają natychmiast.</p>
+      <div class="problem-header animate-in">
+        <div class="section-label">Dane, które uzasadniają wydatek</div>
+        <h2>Dlaczego Twoja szkoła potrzebuje programu regulacji emocji?</h2>
+      </div>
 
-      <div class="problem-grid">
-        <div class="problem-card">
-          <div class="problem-card-icon coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-          <div class="problem-stat">68%</div>
-          <h4>Stres w ciele</h4>
-          <p>Dzieci nie rozpoznają, że ich ból brzucha, napięcie mięśni czy ból głowy to odpowiedź ciała na emocje.</p>
+      <div class="problem-grid animate-in">
+        <div class="stat-card">
+          <div class="stat-number">36<span class="stat-unit">%</span></div>
+          <div class="stat-label">dzieci 9–12 lat z objawami lęku, napięcia lub obniżonego nastroju</div>
+          <div class="stat-source">Eurochild, 2024</div>
         </div>
-        <div class="problem-card">
-          <div class="problem-card-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-          <div class="problem-stat">73%</div>
-          <h4>Brak narzędzi</h4>
-          <p>Nauczycieli deklaruje, że nie ma praktycznych, gotowych do wdrożenia metod regulacji emocji w klasie.</p>
+        <div class="stat-card">
+          <div class="stat-number">53<span class="stat-unit">%</span></div>
+          <div class="stat-label">uczniów deklaruje codzienny stres szkolny</div>
+          <div class="stat-source">NASK „Młodzi Cyfrowi", 2023</div>
         </div>
-        <div class="problem-card">
-          <div class="problem-card-icon gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-          <div class="problem-stat">+40%</div>
-          <h4>Wzrost problemów</h4>
-          <p>Wzrost dolegliwości psychosomatycznych u&nbsp;dzieci w&nbsp;ostatnich 5&nbsp;latach. Trend wymaga systemowej odpowiedzi.</p>
+        <div class="stat-card">
+          <div class="stat-number">60<span class="stat-unit">%</span></div>
+          <div class="stat-label">rodziców widzi spadek motywacji i trudności ze skupieniem</div>
+          <div class="stat-source">CBOS, 2024</div>
         </div>
+        <div class="stat-card">
+          <div class="stat-number">1:5</div>
+          <div class="stat-label">co piąte dziecko w Europie z problemami emocjonalnymi</div>
+          <div class="stat-source">WHO, 2023</div>
+        </div>
+      </div>
+
+      <div class="problem-quote animate-in">
+        <p>„Dzieci są emocjonalnie przeciążone, a tradycyjne metody wychowawcze nie wystarczają. Bez systemowych narzędzi profilaktycznych szkoła gasi kryzysy zamiast im zapobiegać."</p>
+        <cite>Na podstawie danych z Przewodnika Sensi Body dla nauczycieli</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section class="deliverables" id="deliverables">
+    <div class="container">
+      <div class="deliverables-header animate-in">
+        <div class="section-label">Co konkretnie otrzymujesz</div>
+        <h2>Nie kupujesz szkolenia. Kupujesz gotowy system z dokumentacją.</h2>
+        <p>Każdy element jest zaprojektowany tak, aby oszczędzić czas nauczycieli i dostarczyć Ci dane do raportowania.</p>
+      </div>
+
+      <div class="deliver-grid animate-in">
+
+        <div class="deliver-card highlight">
+          <div class="deliver-icon orange">📊</div>
+          <h3>Narzędzia ewaluacyjne i raport</h3>
+          <p>Gotowe arkusze, które nauczyciele wypełniają podczas pracy z programem. Na koniec semestru — zbiorczy raport do dokumentacji szkoły.</p>
+          <ul class="detail-list">
+            <li>Arkusz obserwacji nauczyciela (A1)</li>
+            <li>Kwestionariusz rozmowy z dzieckiem (A2)</li>
+            <li>Mini-dzienniczek emocji klasy (A3)</li>
+            <li>Karta wskaźników sukcesu (A4)</li>
+            <li>Arkusz podsumowujący ewaluację grupy (A5)</li>
+            <li>Dane gotowe do programu wych.-prof.</li>
+          </ul>
+        </div>
+
+        <div class="deliver-card">
+          <div class="deliver-icon teal">📖</div>
+          <h3>10 kart emocji + 10 filmów</h3>
+          <p>Fizyczne karty z kodem QR do filmów instruktażowych. 5 emocji × 2 poziomy natężenia. Dziecko samo wybiera kartę, skanuje kod, wykonuje ćwiczenie 3–5 min.</p>
+          <ul class="detail-list">
+            <li>Złość, smutek, strach, stres, zmęczenie</li>
+            <li>2 poziomy: umiarkowany i silny</li>
+            <li>Film z fizjoterapeutką i maskotką Sensi</li>
+            <li>Gotowe do pracy w klasie, świetlicy, domu</li>
+          </ul>
+        </div>
+
+        <div class="deliver-card">
+          <div class="deliver-icon gold">🎓</div>
+          <h3>Szkolenie + przewodnik</h3>
+          <p>Praktyczne szkolenie dla nauczycieli — nie wykład teoretyczny, lecz warsztat z ćwiczeniami. Każdy uczestnik otrzymuje obszerny przewodnik metodyczny.</p>
+          <ul class="detail-list">
+            <li>3h szkolenie stacjonarne dla rady pedagogicznej</li>
+            <li>Przewodnik metodyczny (78 stron)</li>
+            <li>Gotowe scenariusze zajęć na cały rok</li>
+            <li>Zaświadczenie o ukończeniu szkolenia</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- METHOD -->
-  <section class="method fade-in" id="metoda">
+  <section class="method" id="method">
     <div class="container">
-      <div class="section-label" style="text-align:center">Jak to działa</div>
-      <h2 class="section-title" style="text-align:center; margin-left:auto; margin-right:auto;">Metoda SensiBody w&nbsp;trzech krokach</h2>
-      <p class="section-subtitle" style="text-align:center; margin-left:auto; margin-right:auto;">Autorska sekwencja oparta na fizjoterapii dziecięcej i&nbsp;neurobiologii emocji</p>
+      <div class="method-header animate-in">
+        <div class="section-label">Jak to działa</div>
+        <h2>Metoda Sensi Body w trzech krokach</h2>
+        <p>Autorska sekwencja oparta na fizjoterapii dziecięcej i neurobiologii emocji</p>
+      </div>
 
-      <div class="method-steps">
+      <div class="method-steps animate-in">
         <div class="method-step">
-          <div class="method-step-number">1</div>
+          <div class="method-step-circle">1</div>
           <h4>Czuję ciałem</h4>
-          <p>Dziecko uczy się rozpoznawać emocje w&nbsp;ciele — napięcie, ucisk, ciepło. Karty SensiBody pomagają nazwać to, co czuje.</p>
+          <p>Dziecko uczy się rozpoznawać emocje w ciele — napięcie, ucisk, ciepło. Karty Sensi Body pomagają nazwać to, co czuje.</p>
         </div>
         <div class="method-step">
-          <div class="method-step-number">2</div>
+          <div class="method-step-circle">2</div>
           <h4>Ruszam ciałem</h4>
-          <p>Filmy z ćwiczeniami (3–5 min) prowadzą przez ruch regulacyjny. Kot Sensi i&nbsp;Nela pokazują jak odzyskać równowagę.</p>
+          <p>Filmy z ćwiczeniami (3–5 min) prowadzą przez ruch regulacyjny. Kot Sensi i Nela pokazują jak odzyskać równowagę.</p>
         </div>
         <div class="method-step">
-          <div class="method-step-number">3</div>
+          <div class="method-step-circle">3</div>
           <h4>Sprawdzam siebie</h4>
-          <p>Dziecko ocenia swoje samopoczucie po ćwiczeniu. Uczy się samoregulacji i&nbsp;buduje poczucie sprawczości.</p>
+          <p>Dziecko ocenia swoje samopoczucie po ćwiczeniu. Uczy się samoregulacji i buduje poczucie sprawczości.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORT DETAIL -->
+  <section class="report" id="report">
+    <div class="container">
+      <div class="report-layout animate-in">
+        <div class="report-content">
+          <div class="section-label">Raport ewaluacyjny</div>
+          <h2>Dane, które możesz pokazać rodzicom, organowi prowadzącemu i kuratorium</h2>
+          <p>
+            System ewaluacji Sensi Body opiera się na ciągłej obserwacji — nie jednorazowym teście. Nauczyciele wypełniają proste arkusze, a Ty otrzymujesz zbiorczy raport dokumentujący zmiany w zachowaniu dzieci, klimacie klasy i współpracy w grupie.
+          </p>
+
+          <div class="report-feature">
+            <div class="report-feature-dot"></div>
+            <div>
+              <h4>Obserwacje nauczyciela</h4>
+              <p>Zachowanie przed i po ćwiczeniu. Rozluźnienie ramion, głębszy oddech, powrót do współpracy — konkretne wskaźniki zmiany.</p>
+            </div>
+          </div>
+
+          <div class="report-feature">
+            <div class="report-feature-dot"></div>
+            <div>
+              <h4>Mini-dzienniczek emocji klasy</h4>
+              <p>Cotygodniowy monitoring nastroju grupy. Wizualna mapa zmian emocjonalnych w czasie — widoczna poprawa klimatu klasy.</p>
+            </div>
+          </div>
+
+          <div class="report-feature">
+            <div class="report-feature-dot"></div>
+            <div>
+              <h4>Arkusz podsumowujący ewaluację grupy</h4>
+              <p>Integruje dane ze wszystkich źródeł. Dominujące emocje, najskuteczniejsze ćwiczenia, cytaty dzieci, zmiany w zachowaniu — gotowy do włączenia do dokumentacji szkoły.</p>
+            </div>
+          </div>
+
+          <div class="report-feature">
+            <div class="report-feature-dot"></div>
+            <div>
+              <h4>Karta wskaźników sukcesu</h4>
+              <p>Mierzalne cele w 5 obszarach: emocjonalnym, fizycznym, społecznym, poznawczym i ogólnego dobrostanu.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="report-mockup">
+          <div class="report-mockup-bar">
+            <div class="report-mockup-dot r"></div>
+            <div class="report-mockup-dot y"></div>
+            <div class="report-mockup-dot g"></div>
+          </div>
+          <div class="report-mockup-body">
+            <div class="mockup-header">
+              <h4>Raport ewaluacyjny — klasa IIa</h4>
+              <span class="mockup-badge">Semestr I 2025/26</span>
+            </div>
+
+            <div style="font-size:.72rem; color:var(--ink-muted); margin-bottom:14px; text-transform:uppercase; letter-spacing:.08em; font-weight:600;">Wskaźniki po 8 sesjach</div>
+
+            <div class="mockup-row">
+              <span class="mockup-row-label">Nazywanie emocji</span>
+              <div class="mockup-row-bar"><div class="mockup-row-fill" style="width:70%"></div></div>
+              <span class="mockup-row-value">70%</span>
+            </div>
+            <div class="mockup-row">
+              <span class="mockup-row-label">Poprawa postawy ciała</span>
+              <div class="mockup-row-bar"><div class="mockup-row-fill" style="width:60%"></div></div>
+              <span class="mockup-row-value">60%</span>
+            </div>
+            <div class="mockup-row">
+              <span class="mockup-row-label">Mniej konfliktów</span>
+              <div class="mockup-row-bar"><div class="mockup-row-fill" style="width:55%"></div></div>
+              <span class="mockup-row-value">↓</span>
+            </div>
+            <div class="mockup-row">
+              <span class="mockup-row-label">Skupienie uwagi</span>
+              <div class="mockup-row-bar"><div class="mockup-row-fill" style="width:50%"></div></div>
+              <span class="mockup-row-value">↑</span>
+            </div>
+            <div class="mockup-row">
+              <span class="mockup-row-label">Poczucie spokoju</span>
+              <div class="mockup-row-bar"><div class="mockup-row-fill" style="width:65%"></div></div>
+              <span class="mockup-row-value">↑</span>
+            </div>
+
+            <div style="margin-top:16px; padding-top:12px; border-top:1px solid var(--border-light); font-size:.72rem; color:var(--ink-muted);">
+              * Cele wskaźnikowe programu. Wyniki na podstawie obserwacji nauczyciela, rozmów z dziećmi i mini-dzienniczka emocji klasy.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRICULUM -->
+  <section class="curriculum" id="curriculum">
+    <div class="container">
+      <div class="curriculum-header animate-in">
+        <div class="section-label">Zgodność z podstawą programową</div>
+        <h2>Realizujesz podstawę programową w 4 obszarach jednocześnie</h2>
+        <p>Sensi Body to nie „dodatkowe zajęcia". To narzędzie, które wspiera nauczyciela w realizacji istniejących celów podstawy programowej (Dz.U. 2017, poz. 356).</p>
+      </div>
+
+      <div class="curr-grid animate-in">
+        <div class="curr-card">
+          <div class="curr-emoji">❤️</div>
+          <div>
+            <h4>Edukacja emocjonalno-społeczna</h4>
+            <p>Rozpoznawanie i nazywanie emocji, radzenie sobie z napięciem, współpraca, empatia</p>
+          </div>
+        </div>
+        <div class="curr-card">
+          <div class="curr-emoji">🏃</div>
+          <div>
+            <h4>Edukacja fizyczna</h4>
+            <p>Ćwiczenia ruchowe, prawidłowa postawa ciała, dostosowywanie aktywności do potrzeb</p>
+          </div>
+        </div>
+        <div class="curr-card">
+          <div class="curr-emoji">🧠</div>
+          <div>
+            <h4>Edukacja zdrowotna</h4>
+            <p>Wpływ ruchu i oddechu na samopoczucie, strategie radzenia sobie ze stresem</p>
+          </div>
+        </div>
+        <div class="curr-card">
+          <div class="curr-emoji">🎨</div>
+          <div>
+            <h4>Edukacja artystyczna</h4>
+            <p>Wyrażanie emocji ruchem, gestem i mimiką, łączenie ruchu z ekspresją uczuć</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="curr-note animate-in">
+        <strong>Wyniki ewaluacji mogą zostać włączone do szkolnego programu wychowawczo-profilaktycznego</strong> w obszarze dobrostanu psychicznego i profilaktyki stresu.
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="how-header animate-in">
+        <div class="section-label">Wdrożenie krok po kroku</div>
+        <h2>Od rozmowy do raportu — w jednym semestrze</h2>
+      </div>
+
+      <div class="how-steps animate-in">
+        <div class="how-step">
+          <div class="how-step-num">1</div>
+          <h4>Rozmowa z dyrektorem</h4>
+          <p>Omawiamy potrzeby szkoły i dopasowujemy program do wielkości rady pedagogicznej</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">2</div>
+          <h4>Szkolenie rady</h4>
+          <p>3h warsztat stacjonarny — nauczyciele ćwiczą z kartami i filmami, dostają przewodnik</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">3</div>
+          <h4>Praca z dziećmi</h4>
+          <p>Nauczyciele wplatają 5–15 min ćwiczenia w rytm dnia. Wypełniają arkusze obserwacji</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">4</div>
+          <h4>Raport i dokumentacja</h4>
+          <p>Zbiorczy raport ewaluacyjny gotowy do programu wychowawczo-profilaktycznego</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PRICING -->
-  <section class="pricing fade-in" id="pakiety">
+  <section class="pricing" id="pricing">
     <div class="container">
-      <div class="pricing-header">
-        <div class="section-label">Pakiety warsztatów</div>
-        <h2 class="section-title">Wybierz poziom wdrożenia dopasowany do&nbsp;Twojej placówki</h2>
-        <p class="section-subtitle">Każdy pakiet to kompletne szkolenie rady pedagogicznej — od poznania metody po systemowe wdrożenie w&nbsp;placówce.</p>
+      <div class="pricing-header animate-in">
+        <div class="section-label">Pakiety dla szkół</div>
+        <h2>Wybierz pakiet dopasowany do Twojej szkoły</h2>
+        <p>Ceny dla jednej placówki. Przy zamówieniu dla kilku szkół — rabat 15%.</p>
       </div>
 
-      <div class="pricing-grid">
-        <!-- POZNAJ -->
-        <div class="pricing-card">
-          <div class="pricing-tier-label">Pakiet Poznaj</div>
-          <h3 class="pricing-name">Pierwszy krok z&nbsp;SensiBody</h3>
-          <p class="pricing-tagline">Poznaj metodę i zdecyduj, czy chcesz ją wdrożyć na stałe.</p>
-          <div class="pricing-price">
-            <div class="pricing-amount">2 490 <span>zł brutto</span></div>
-          </div>
-          <div class="pricing-meta">
-            <div class="pricing-meta-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              3 godziny
-            </div>
-            <div class="pricing-meta-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              do 35 osób
-            </div>
-          </div>
-          <ul class="pricing-features">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Warsztat doświadczeniowy SensiBody
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Materiały cyfrowe (PDF podręcznika, e-scenariusze)
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Dostęp do 3 przykładowych filmów SensiBody
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Certyfikat uczestnictwa
-            </li>
-            <li class="disabled">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-              Drukowany podręcznik i karty
-            </li>
-            <li class="disabled">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-              Konsultacja follow-up
-            </li>
+      <div class="pricing-cards animate-in">
+        <div class="price-card">
+          <div class="price-card-label">Pakiet Podstawowy</div>
+          <h3>Szkolenie + materiały</h3>
+          <p class="price-card-desc">Szkolenie rady pedagogicznej z kompletem kart i filmów. Dobry start dla szkoły testującej program.</p>
+          <div class="price-amount">1 800 <span>PLN netto</span></div>
+          <p class="price-per">Rada pedagogiczna do 15 osób</p>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>3h szkolenie stacjonarne</li>
+            <li>10 kart emocji + kody QR do filmów</li>
+            <li>Przewodnik metodyczny (78 stron)</li>
+            <li>Zaświadczenie o ukończeniu szkolenia</li>
+            <li>Gotowe scenariusze zajęć</li>
           </ul>
-          <a href="#kontakt" class="pricing-cta outline">Wybierz pakiet</a>
+          <a href="#contact" class="price-btn secondary">Zapytaj o termin</a>
         </div>
 
-        <!-- WDROŻENIE -->
-        <div class="pricing-card featured">
-          <div class="pricing-featured-badge">✦ Rekomendowany</div>
-          <div class="pricing-tier-label">Pakiet Wdrożenie</div>
-          <h3 class="pricing-name">SensiBody w&nbsp;codziennej praktyce</h3>
-          <p class="pricing-tagline">Pełne materiały fizyczne + wsparcie po szkoleniu. Wdrożenie, nie tylko wykład.</p>
-          <div class="pricing-price">
-            <div class="pricing-amount">3 900 <span>zł brutto</span></div>
-          </div>
-          <div class="pricing-meta">
-            <div class="pricing-meta-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              4 godziny
-            </div>
-            <div class="pricing-meta-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              do 30 osób
-            </div>
-          </div>
-          <ul class="pricing-features">
-            <li class="highlight">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Wszystko z pakietu Poznaj
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Rozszerzona część praktyczna (realne sytuacje szkolne)
-            </li>
-            <li class="highlight">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Drukowany podręcznik + zestaw kart dla każdego
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Mini-pakiet „5 minut regulacji" — gotowe sekwencje
-            </li>
-            <li class="highlight">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              1 konsultacja grupowa follow-up (45 min, po 4–6 tyg.)
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Certyfikat uczestnictwa
-            </li>
+        <div class="price-card featured">
+          <div class="price-card-label">Pakiet Dokumentacja</div>
+          <h3>Szkolenie + raporty + wsparcie</h3>
+          <p class="price-card-desc">Pełny system z narzędziami ewaluacyjnymi, konsultacjami i zbiorczym raportem na koniec semestru.</p>
+          <div class="price-amount">3 200 <span>PLN netto</span></div>
+          <p class="price-per">Rada pedagogiczna do 25 osób</p>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Wszystko z Pakietu Podstawowego</li>
+            <li class="extra">5 arkuszy ewaluacyjnych (A1–A5)</li>
+            <li class="extra">Zbiorczy raport podsumowujący wdrożenie</li>
+            <li class="extra">Karta wskaźników sukcesu programu</li>
+            <li class="extra">2 konsultacje online w trakcie semestru</li>
+            <li>Materiały dla rodziców (przewodnik)</li>
+            <li>Wsparcie e-mail przez cały semestr</li>
           </ul>
-          <a href="#kontakt" class="pricing-cta primary">Wybierz pakiet</a>
-        </div>
-
-        <!-- SYSTEM -->
-        <div class="pricing-card">
-          <div class="pricing-tier-label">Pakiet System</div>
-          <h3 class="pricing-name">SensiBody jako element pracy placówki</h3>
-          <p class="pricing-tagline">Systemowe wdrożenie z dokumentacją, wsparciem koordynatora i&nbsp;raportem dla dyrektora.</p>
-          <div class="pricing-price">
-            <div class="pricing-amount">5 400 <span>zł brutto</span></div>
-          </div>
-          <div class="pricing-meta">
-            <div class="pricing-meta-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              5h + 2×45 min online
-            </div>
-            <div class="pricing-meta-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              do 25 osób
-            </div>
-          </div>
-          <ul class="pricing-features">
-            <li class="highlight">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Wszystko z pakietu Wdrożenie
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Włączenie SensiBody do dokumentacji placówki
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Szablony sprawozdań, planów pracy, innowacji
-            </li>
-            <li class="highlight">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              2 konsultacje follow-up (po 4 i 10 tygodniach)
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Wsparcie mailowe przez 3 miesiące (do 5 pytań)
-            </li>
-            <li class="highlight">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Raport wdrożeniowy dla dyrektora (po 3 mies.)
-            </li>
-          </ul>
-          <a href="#kontakt" class="pricing-cta outline">Wybierz pakiet</a>
+          <a href="#contact" class="price-btn primary">Umów rozmowę →</a>
         </div>
       </div>
+
+      <p class="pricing-note animate-in">
+        Szkolenie może być finansowane z budżetu doskonalenia zawodowego nauczycieli lub z budżetu programu wychowawczo-profilaktycznego. Wystawiamy fakturę VAT.
+      </p>
     </div>
   </section>
 
   <!-- ADDONS -->
-  <section class="addons">
+  <section class="addons" id="addons">
     <div class="container">
-      <div class="addons-container">
-        <div class="addons-header">
-          <h3>Dodatki — niezależnie od pakietu</h3>
-          <p>Rozszerz współpracę o dodatkowe elementy dopasowane do potrzeb Twojej placówki.</p>
+      <div class="addons-header animate-in">
+        <h2>Dodatki — niezależnie od pakietu</h2>
+        <p>Rozszerz współpracę o dodatkowe elementy dopasowane do potrzeb Twojej placówki.</p>
+      </div>
+
+      <div class="addons-grid animate-in">
+        <div class="addon-card">
+          <div class="addon-icon">💬</div>
+          <div class="addon-info">
+            <h4>Dodatkowa konsultacja follow-up</h4>
+            <p>45 min, online, grupowa</p>
+          </div>
+          <div class="addon-price">350 zł</div>
         </div>
-        <div class="addons-grid">
-          <div class="addon-item">
-            <div class="addon-info">
-              <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2B7A6B" stroke-width="2" width="20" height="20"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-              <div>
-                <div class="addon-name">Dodatkowa konsultacja follow-up</div>
-                <div class="addon-desc">45 min, online, grupowa</div>
-              </div>
-            </div>
-            <div class="addon-price">350 zł</div>
+        <div class="addon-card">
+          <div class="addon-icon">👨‍👩‍👧</div>
+          <div class="addon-info">
+            <h4>Warsztat dla rodziców</h4>
+            <p>3 godziny, stacjonarny</p>
           </div>
-          <div class="addon-item">
-            <div class="addon-info">
-              <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2B7A6B" stroke-width="2" width="20" height="20"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-              <div>
-                <div class="addon-name">Warsztat dla rodziców</div>
-                <div class="addon-desc">3 godziny, stacjonarny</div>
-              </div>
-            </div>
-            <div class="addon-price">1 500 zł</div>
+          <div class="addon-price">1 500 zł</div>
+        </div>
+        <div class="addon-card">
+          <div class="addon-icon">🖥️</div>
+          <div class="addon-info">
+            <h4>Platforma e-learning</h4>
+            <p>Dostęp na 6 mies. dla placówki</p>
           </div>
-          <div class="addon-item">
-            <div class="addon-info">
-              <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2B7A6B" stroke-width="2" width="20" height="20"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-              <div>
-                <div class="addon-name">Platforma e-learning</div>
-                <div class="addon-desc">Dostęp na 6 mies. dla placówki</div>
-              </div>
-            </div>
-            <div class="addon-price">400 zł</div>
+          <div class="addon-price">400 zł</div>
+        </div>
+      </div>
+      <div class="addons-grid addons-single animate-in">
+        <div class="addon-card">
+          <div class="addon-icon">🃏</div>
+          <div class="addon-info">
+            <h4>Dodatkowy komplet kart</h4>
+            <p>Karty + podręcznik, 1 zestaw</p>
           </div>
-          <div class="addon-item">
-            <div class="addon-info">
-              <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2B7A6B" stroke-width="2" width="20" height="20"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
-              <div>
-                <div class="addon-name">Dodatkowy komplet kart</div>
-                <div class="addon-desc">Karty + podręcznik, 1 zestaw</div>
-              </div>
-            </div>
-            <div class="addon-price">89 zł</div>
-          </div>
+          <div class="addon-price">89 zł</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about fade-in" id="prowadzaca">
-    <div class="container about-inner">
-      <div class="about-visual">
-        <div class="about-image-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span>Zdjęcie prowadzącej</span>
-        </div>
-      </div>
-      <div class="about-content">
-        <div class="about-name">Prowadząca warsztaty</div>
-        <h2>Elżbieta Markiewicz</h2>
-        <p class="about-text">
-          Fizjoterapeutka dziecięca i nauczycielka edukacji wczesnoszkolnej z&nbsp;10-letnim doświadczeniem w pracy z&nbsp;dziećmi. Autorka metody SensiBody — pierwszego w&nbsp;Polsce systemu łączącego fizjoterapię dziecięcą z&nbsp;edukacją emocjonalną.
-        </p>
-        <p class="about-text">
-          Twórczyni programu testowanego w ramach grantu UE „WŁĄCZ POPOJUTRZE!" na grupie 80–100 dzieci. Łączy wiedzę kliniczną z&nbsp;codzienną praktyką nauczyciela, tworząc narzędzia, które naprawdę działają w&nbsp;realiach polskiej szkoły.
-        </p>
-        <div class="about-tags">
-          <span class="about-tag">Fizjoterapia dziecięca</span>
-          <span class="about-tag">Edukacja wczesnoszkolna</span>
-          <span class="about-tag">Regulacja emocji</span>
-          <span class="about-tag">Innowacja UE</span>
-        </div>
-        <div class="about-credentials">
-          <div class="credential">
-            <div class="credential-number">10+</div>
-            <div class="credential-text">lat pracy z dziećmi</div>
-          </div>
-          <div class="credential">
-            <div class="credential-number">80–100</div>
-            <div class="credential-text">dzieci w fazie testowej</div>
-          </div>
-          <div class="credential">
-            <div class="credential-number">30</div>
-            <div class="credential-text">kart emocjonalno-ruchowych</div>
-          </div>
-          <div class="credential">
-            <div class="credential-number">30</div>
-            <div class="credential-text">filmów instruktażowych</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="testimonials fade-in">
+  <!-- SCIENCE -->
+  <section class="science" id="science">
     <div class="container">
-      <div class="testimonials-header">
-        <div class="section-label">Opinie</div>
-        <h2 class="section-title" style="margin-left:auto; margin-right:auto;">Co mówią nauczyciele po warsztatach</h2>
+      <div class="science-header animate-in">
+        <div class="section-label">Podstawy naukowe</div>
+        <h2>Program oparty na badaniach i politykach publicznych</h2>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">„Następnego dnia użyłam kart na lekcji. Dzieci same prosiły o&nbsp;powtórkę. Pierwszy raz widziałam, jak chłopiec z&nbsp;ADHD sam sięgnął po kartę, żeby się uspokoić."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">AK</div>
-            <div>
-              <div class="testimonial-name">Anna K.</div>
-              <div class="testimonial-role">Nauczycielka kl. II, Ruda Śląska</div>
-            </div>
-          </div>
+
+      <div class="science-cols animate-in">
+        <div class="science-col">
+          <h4>Podstawy naukowe programu</h4>
+          <div class="science-ref">Teoria poliwagalna Stephena Porgesa — neurobiologiczne podstawy regulacji emocji przez ciało</div>
+          <div class="science-ref">Neurodydaktyka (Bauer, Spitzer) — jak uczy się mózg i dlaczego ruch wspiera uczenie</div>
+          <div class="science-ref">Metoda ruchu rozwijającego Weroniki Sherborne</div>
+          <div class="science-ref">Integracja sensoryczna, joga dziecięca i uważność</div>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">„Wreszcie szkolenie, po którym naprawdę wiemy, co robić. Nie teoria, ale konkretne ćwiczenia, które wchodzą w&nbsp;5&nbsp;minut lekcji. Cała rada była pod wrażeniem."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">MP</div>
-            <div>
-              <div class="testimonial-name">Magdalena P.</div>
-              <div class="testimonial-role">Pedagog szkolny</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">„Jako dyrektor szukałam czegoś, co zmieni klimat szkoły, nie tylko jedną klasę. SensiBody dało nam język, którym teraz mówi cała placówka."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">BW</div>
-            <div>
-              <div class="testimonial-name">Barbara W.</div>
-              <div class="testimonial-role">Dyrektor szkoły podstawowej</div>
-            </div>
-          </div>
+        <div class="science-col">
+          <h4>Zgodność z politykami publicznymi</h4>
+          <div class="science-ref">WHO — Health 2025: Mental Health for All</div>
+          <div class="science-ref">Strategia Rozwoju Kapitału Ludzkiego 2030</div>
+          <div class="science-ref">Polityka Oświatowa MEN — profilaktyka emocjonalna uczniów</div>
+          <div class="science-ref">Narodowy Program Zdrowia 2021–2025 — zdrowie psychiczne i aktywność fizyczna</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="faq fade-in" id="faq">
+  <section class="faq" id="faq">
     <div class="container">
-      <div class="faq-header">
-        <div class="section-label">Najczęstsze pytania</div>
-        <h2 class="section-title" style="margin-left:auto; margin-right:auto;">Zanim się zdecydujesz</h2>
+      <div class="faq-header animate-in">
+        <h2>Zanim się zdecydujesz</h2>
       </div>
-      <div class="faq-list">
+
+      <div class="faq-list animate-in">
+
         <div class="faq-item">
-          <button class="faq-question">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
             Czy szkolenie może sfinansować szkoła publiczna?
-            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Tak. Szkolenie może być finansowane ze środków na doskonalenie nauczycieli (art. 70a Karty Nauczyciela), z budżetu programu wychowawczo-profilaktycznego, lub z dotacji organu prowadzącego. Wystawiam fakturę VAT i zaświadczenie MEN. Mogę też pomóc przygotować uzasadnienie do wniosku budżetowego.
-            </div>
+            <p>Tak. Szkolenie może być finansowane z budżetu doskonalenia zawodowego nauczycieli, z budżetu programu wychowawczo-profilaktycznego lub ze środków organu prowadzącego przeznaczonych na profilaktykę zdrowia psychicznego. Wystawiamy fakturę VAT.</p>
           </div>
         </div>
+
         <div class="faq-item">
-          <button class="faq-question">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
             Ile trwa przygotowanie szkoły do warsztatu?
-            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Potrzebuję sali z projektorem i miejscem do ruchu (najlepiej sala gimnastyczna lub świetlica). Materiały przygotowuję i przywożę sama. Wystarczy umówić termin z&nbsp;2-3-tygodniowym wyprzedzeniem.
-            </div>
+            <p>Minimum to 2 tygodnie na ustalenie terminu i logistyki. Potrzebna jest sala z projektorem i przestrzenią do ćwiczeń. Przed szkoleniem przeprowadzamy krótką rozmowę z dyrektorem, aby dopasować program do potrzeb placówki.</p>
           </div>
         </div>
+
         <div class="faq-item">
-          <button class="faq-question">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
             Czy metoda działa z dziećmi z SPE (ADHD, ASD, nieśmiałość)?
-            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              SensiBody zostało zaprojektowane z myślą o edukacji włączającej. Ćwiczenia mają modyfikacje dla dzieci o różnym poziomie sprawności i napięcia mięśniowego. Na warsztacie omawiam konkretne adaptacje dla dzieci z ASD, ADHD, zaburzeniami napięcia i nieśmiałością.
-            </div>
+            <p>Tak. Program Sensi Body jest zaprojektowany zgodnie z zasadami edukacji włączającej. Ćwiczenia mają modyfikacje dla dzieci o różnym poziomie sprawności i napięcia mięśniowego. Dziecko samo wybiera tempo i intensywność — zasada „w Sensi Body nic nie muszę, mogę spróbować".</p>
           </div>
         </div>
+
         <div class="faq-item">
-          <button class="faq-question">
-            Czym różni się pakiet Wdrożenie od Poznaj?
-            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Czym różni się pakiet Dokumentacja od Podstawowego?
+            <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Pakiet Poznaj to 3-godzinne wprowadzenie z materiałami cyfrowymi — idealny, żeby sprawdzić, czy metoda pasuje do Waszej placówki. Pakiet Wdrożenie daje każdemu nauczycielowi fizyczne karty i podręcznik, z którymi może pracować od następnego dnia. Dodatkowo obejmuje konsultację follow-up po 4-6 tygodniach, żeby wspólnie rozwiązać problemy wdrożeniowe.
-            </div>
+            <p>Pakiet Podstawowy to szkolenie + materiały dydaktyczne. Pakiet Dokumentacja dodatkowo zawiera: 5 arkuszy ewaluacyjnych (A1–A5), zbiorczy raport podsumowujący wdrożenie, kartę wskaźników sukcesu, 2 konsultacje online w trakcie semestru, materiały dla rodziców oraz wsparcie e-mail. To pakiet dla szkół, które chcą włączyć wyniki do programu wychowawczo-profilaktycznego.</p>
           </div>
         </div>
+
         <div class="faq-item">
-          <button class="faq-question">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
             Czy warsztat jest zgodny z podstawą programową?
-            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Tak, SensiBody realizuje cele podstawy programowej w obszarze emocjonalnym, społecznym i fizycznym. Na warsztacie (szczególnie w pakiecie System) pokazuję dokładne mapowanie celów programu do wymagań podstawy programowej, co ułatwia dokumentację i sprawozdawczość.
-            </div>
+            <p>Tak. Program realizuje cele Podstawy programowej wychowania przedszkolnego i edukacji wczesnoszkolnej (Dz.U. 2017, poz. 356) w czterech obszarach: edukacji emocjonalno-społecznej, fizycznej, zdrowotnej i artystycznej. Wpisuje się również w cele Narodowego Programu Zdrowia 2021–2025 i Polityki Oświatowej MEN.</p>
           </div>
         </div>
+
         <div class="faq-item">
-          <button class="faq-question">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
             Dojazd — czy przyjeżdżasz do placówki?
-            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Tak, prowadzę warsztaty stacjonarnie w Waszej placówce. Region Śląska — dojazd w cenie. Reszta Polski — koszty dojazdu ustalamy indywidualnie (zwykle 250–400 zł). Skontaktuj się, podaj lokalizację, a podam dokładną kwotę.
-            </div>
+            <p>Tak, szkolenie odbywa się stacjonarnie w Twojej placówce. Dojazd w województwie śląskim jest wliczony w cenę. Dla placówek z innych województw — koszt dojazdu ustalamy indywidualnie.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-layout animate-in">
+        <div class="about-photo">👩‍⚕️</div>
+        <div class="about-content">
+          <h2>Ela — autorka programu</h2>
+          <p>
+            Fizjoterapeutka dziecięca i nauczycielka edukacji wczesnoszkolnej z 10-letnim doświadczeniem w pracy z dziećmi. Sensi Body powstało z obserwacji klinicznych — dzieci, które nie potrafią nazwać tego, co czują w ciele, nie potrafią też regulować swoich emocji.
+          </p>
+          <p>
+            Program został opracowany w ramach inkubatora innowacji społecznych „Włącz Popojutrze!" dofinansowanego z Europejskiego Funduszu Społecznego Plus i jest testowany w polskich szkołach.
+          </p>
+          <div class="about-tags">
+            <span class="about-tag">Fizjoterapia dziecięca</span>
+            <span class="about-tag">Edukacja wczesnoszkolna</span>
+            <span class="about-tag">10 lat doświadczenia</span>
+            <span class="about-tag">Innowacja społeczna UE</span>
           </div>
         </div>
       </div>
@@ -1934,76 +1474,38 @@
   </section>
 
   <!-- CTA -->
-  <section class="cta-section" id="kontakt">
+  <section class="cta" id="contact">
     <div class="container">
-      <div class="cta-card">
-        <h2>Porozmawiajmy o&nbsp;wdrożeniu SensiBody w&nbsp;Twojej placówce</h2>
-        <p>Napisz lub zadzwoń — wspólnie dobierzemy pakiet i&nbsp;termin dopasowany do Waszego kalendarza.</p>
-        <a href="mailto:kontakt@sensibody.pl" class="btn-white">
-          Napisz do mnie
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+      <div class="cta-inner animate-in">
+        <h2>Porozmawiajmy o Twojej szkole</h2>
+        <p>
+          Bezpłatna, 20-minutowa rozmowa. Omówimy potrzeby Twojej szkoły, wielkość rady pedagogicznej i najlepszy moment wdrożenia w roku szkolnym.
+        </p>
+        <div class="cta-actions">
+          <a href="mailto:kontakt@sensibody.pl" class="btn-white">Napisz e-mail →</a>
+          <a href="#pricing" class="btn-ghost">Zobacz pakiety</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        © 2026 SensiBody · Elżbieta Markiewicz. Wszelkie prawa zastrzeżone.
-      </div>
-      <ul class="footer-links">
-        <li><a href="#">Polityka prywatności</a></li>
-        <li><a href="#">Regulamin</a></li>
-        <li><a href="#">Kontakt</a></li>
-      </ul>
+    <div class="container">
+      <p>
+        © 2025 Sensi Body · Program opracowany w ramach inkubatora „Włącz Popojutrze!" dofinansowanego z EFS+<br>
+        Wersja podstawowa (10 kart) dostępna bezpłatnie na licencji Creative Commons dla wszystkich szkół publicznych.
+      </p>
     </div>
   </footer>
 
   <script>
-    // Scroll-based nav styling
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 40);
-    });
-
-    // Mobile menu toggle
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navLinks = document.getElementById('navLinks');
-    mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-
-    // Close mobile menu on link click
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('active'));
-    });
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const wasActive = item.classList.contains('active');
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-        if (!wasActive) item.classList.add('active');
-      });
-    });
-
-    // Fade-in on scroll
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    // Simple scroll animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
   </script>
+
 </body>
 </html>
