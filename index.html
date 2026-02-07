@@ -752,15 +752,21 @@
       .proof-bar-inner { flex-direction: column; gap: 16px; align-items: flex-start; }
     }
   </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6MGCQDZ2W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Y6MGCQDZ2W');
-</script>
+  <!-- Google Analytics — ładuje się DOPIERO po zgodzie na cookies -->
+  <script>
+    function loadGA() {
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Y6MGCQDZ2W';
+      s.async = true;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-Y6MGCQDZ2W', { anonymize_ip: true });
+    }
+    if (localStorage.getItem('cookies_accepted') === 'true') { loadGA(); }
+  </script>
 </head>
 <body>
 
