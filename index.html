@@ -113,6 +113,208 @@
       .teacher-grid, .teacher-bottom { grid-template-columns: 1fr; }
     }
 
+    /* ── PARENT TESTIMONIAL ── */
+    .testimonial {
+      padding: 88px 0;
+      background: var(--warm-light);
+      border-bottom: 1px solid var(--slate-border);
+    }
+    .testimonial-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .testimonial-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .testimonial-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      box-shadow: 0 4px 24px rgba(27, 42, 61, 0.06);
+      position: relative;
+    }
+    .testimonial-quote-mark {
+      position: absolute;
+      top: -18px;
+      left: 48px;
+      width: 52px;
+      height: 52px;
+      background: var(--warm);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(196, 112, 75, 0.25);
+    }
+    .testimonial-quote-mark svg {
+      width: 24px;
+      height: 24px;
+      color: var(--white);
+    }
+    .testimonial-context {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #F0E6E0;
+    }
+    .testimonial-context-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--warm-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .testimonial-context-icon svg {
+      width: 18px;
+      height: 18px;
+      color: var(--warm);
+    }
+    .testimonial-context-text {
+      font-size: 0.88rem;
+      color: var(--warm);
+      font-weight: 500;
+    }
+    .testimonial-body {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .testimonial-body p {
+      margin-bottom: 16px;
+    }
+    .testimonial-body p:last-child {
+      margin-bottom: 0;
+    }
+    .testimonial-highlight {
+      color: var(--text);
+      font-weight: 500;
+    }
+    .testimonial-emphasis {
+      background: var(--warm-glow);
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: var(--warm);
+      font-weight: 600;
+    }
+    .testimonial-divider {
+      text-align: center;
+      color: var(--warm);
+      font-size: 1.2rem;
+      margin: 20px 0;
+      letter-spacing: 0.3em;
+    }
+    .testimonial-takeaways {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #F0E6E0;
+    }
+    .testimonial-takeaway {
+      text-align: center;
+      padding: 16px 12px;
+      background: var(--warm-light);
+      border-radius: var(--radius);
+    }
+    .testimonial-takeaway-value {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--warm);
+      margin-bottom: 4px;
+    }
+    .testimonial-takeaway-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid #F0E6E0;
+    }
+    .testimonial-author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--slate);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-family: 'Fraunces', serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    .testimonial-author-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .testimonial-author-name {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+    .testimonial-author-role {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .testimonial-expand {
+      background: none;
+      border: none;
+      color: var(--warm);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 4px 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity 0.2s;
+    }
+    .testimonial-expand:hover { opacity: 0.75; }
+    .testimonial-expand svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s;
+    }
+    .testimonial-full {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+    .testimonial-full.open {
+      max-height: 600px;
+    }
+    .testimonial-expand.open svg {
+      transform: rotate(180deg);
+    }
+    .testimonial-recommend {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+      color: var(--warm);
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    @media (max-width: 768px) {
+      .testimonial-card { padding: 32px 24px; }
+      .testimonial-quote-mark { left: 24px; }
+      .testimonial-takeaways { grid-template-columns: 1fr; }
+    }
+
     
   /* Crisis data */
 
@@ -1457,6 +1659,76 @@
     </div>
   </section>
 
+  <!-- PARENT TESTIMONIAL -->
+  <section class="testimonial fade-in">
+    <div class="container testimonial-inner">
+      <div class="testimonial-header">
+        <div class="section-eyebrow">Głos rodzica</div>
+        <h2 class="section-heading">Karty działają też w&nbsp;domu</h2>
+        <p class="section-desc" style="margin: 0 auto;">Pierwsza reakcja mamy, która użyła kart Sensi Body w&nbsp;trudnym momencie z&nbsp;córką — bez wcześniejszego przygotowania.</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 7H7a4 4 0 0 0-4 4v1a3 3 0 0 0 3 3h1a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2H6a2 2 0 0 1 2-2h3V7zm10 0h-4a4 4 0 0 0-4 4v1a3 3 0 0 0 3 3h1a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2h-1a2 2 0 0 1 2-2h3V7z"/></svg>
+        </div>
+
+        <div class="testimonial-context">
+          <div class="testimonial-context-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <span class="testimonial-context-text">Prawdziwa historia — niedzielny wieczór, emocje rosną</span>
+        </div>
+
+        <div class="testimonial-body">
+          <p>Karty Sensi Body leżały u&nbsp;nas w&nbsp;kopercie, bo <span class="testimonial-highlight">byłam przekonana, że wymagają dużo czasu, żeby się z&nbsp;nimi zapoznać</span>. Miałam nawet lekki lęk, że w&nbsp;sytuacji kryzysowej nie będę umiała ich użyć od razu.</p>
+
+          <p>A&nbsp;jednak — wyjęłam kopertę, a&nbsp;z niej piękną teczkę. W&nbsp;środku bardzo estetyczne, ciekawie zaprojektowane karty i&nbsp;niewielki skrypt. <span class="testimonial-highlight">Moja córka natychmiast wzięła karty do ręki</span> i&nbsp;zaczęła je przeglądać. <span class="testimonial-emphasis">Intuicyjnie od razu wybrała kartę, która najlepiej oddawała to, co czuła.</span></p>
+
+          <p>Przeczytałyśmy krótką historyjkę dla dziecka i&nbsp;wskazówkę dla rodzica. Emocje na chwilę opadły. Gdy po chwili znów się podniosły, <span class="testimonial-highlight">córka sama sięgnęła po kolejną kartę</span>, pokazała, jak się czuje, znów przeczytałyśmy opis.</p>
+
+          <button class="testimonial-expand" onclick="toggleTestimonial(this)">
+            Czytaj dalej
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+
+          <div class="testimonial-full">
+            <p style="margin-top: 16px;">I&nbsp;tak kilka razy. <span class="testimonial-emphasis">Cały proces trwał może 8&nbsp;minut</span>, a&nbsp;my byłyśmy już spokojne i&nbsp;mogłyśmy przejść do innych czynności.</p>
+
+            <p>Jestem bardzo miło zaskoczona, jak intuicyjne są te karty! <span class="testimonial-highlight">Nawet bez wcześniejszego zapoznania się z&nbsp;nimi okazały się świetnym narzędziem</span> do pracy z&nbsp;emocjami i&nbsp;realnym wsparciem w&nbsp;trudnej sytuacji.</p>
+
+            <p>Skrypt zawiera dużo informacji, jest czytelny i&nbsp;zachęca do spokojnego zagłębienia się w&nbsp;temat. Karty położyłam w&nbsp;widocznym miejscu przy łóżku córki, żebyśmy zawsze mogły po nie sięgnąć wtedy, gdy jest trudno.</p>
+          </div>
+
+          <div class="testimonial-recommend">❤️ Z&nbsp;całego serca polecam</div>
+        </div>
+
+        <div class="testimonial-takeaways">
+          <div class="testimonial-takeaway">
+            <div class="testimonial-takeaway-value">8 min</div>
+            <div class="testimonial-takeaway-label">od otwarcia kart do&nbsp;wyciszenia</div>
+          </div>
+          <div class="testimonial-takeaway">
+            <div class="testimonial-takeaway-value">0 min</div>
+            <div class="testimonial-takeaway-label">przygotowania — działają od&nbsp;razu</div>
+          </div>
+          <div class="testimonial-takeaway">
+            <div class="testimonial-takeaway-value">Sama</div>
+            <div class="testimonial-takeaway-label">córka sięgała po kolejne karty</div>
+          </div>
+        </div>
+
+        <div class="testimonial-author">
+          <div class="testimonial-author-avatar">M</div>
+          <div class="testimonial-author-info">
+            <span class="testimonial-author-name">Mama uczennicy</span>
+            <span class="testimonial-author-role">Uczestniczka fazy testowej SENSI BODY</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section class="faq fade-in" id="faq">
     <div class="container">
@@ -1622,6 +1894,14 @@
       { threshold: 0.1 }
     );
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+    // Testimonial expand
+    function toggleTestimonial(btn) {
+      const fullText = btn.nextElementSibling;
+      fullText.classList.toggle('open');
+      btn.classList.toggle('open');
+      btn.firstChild.textContent = fullText.classList.contains('open') ? 'Zwiń ' : 'Czytaj dalej ';
+    }
   </script>
 
     <!-- Baner cookies -->
